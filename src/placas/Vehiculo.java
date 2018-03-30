@@ -38,8 +38,8 @@ public void genera_placa(){
     	int al_c,tm,cm;
 
 //for(tm=1;tm<=CANT_MUNI;tm++){
-	
-	//for(cm=0;cm<3;cm++){
+
+    //for(cm=0;cm<3;cm++){
 		System.out.println("\n\n");
 	for(al_c=0;al_c<3;al_c++){
 	    if(al_c==0){
@@ -51,33 +51,33 @@ public void genera_placa(){
             pri_le[al_c]= Integer.toString(let[tm]);
             let_e[al_c]=let[tm];
 }
-        System.out.println("Numero 1: "+al[0]+"Numero 2: "+al[1]+"Numero 3: "+al[2]);
+        //System.out.println("Numero 1: "+al[0]+"Numero 2: "+al[1]+"Numero 3: "+al[2]);
         numbers = (al[2]*1)+(al[1]*10)+(al[0]*100);
-        System.out.println("numbers"+numbers);
-        System.out.println("Letra 1: "+pri_le[0]+let_e[0]+" Letra 2: "+pri_le[1]+let_e[1]+" Letra 3: "+pri_le[2]+let_e[2]);
+        //System.out.println("numbers"+numbers);
+        //System.out.println("Letra 1: "+pri_le[0]+let_e[0]+" Letra 2: "+pri_le[1]+let_e[1]+" Letra 3: "+pri_le[2]+let_e[2]);
         lett1 = (Character.toString(let_e[0])+(Character.toString(let_e[1]))+(Character.toString(let_e[2])));
-        System.out.println("\t \t lett1: "+lett1);
+        //System.out.println("\t \t lett1: "+lett1);
         lett2 = (lett1+ Integer.toString(numbers));
-        System.out.println("lett 2: "+lett2);
+        //System.out.println("lett 2: "+lett2);
         if(placas_dia.isEmpty() == true){
-            System.out.println("Solo una vez please");
+            //System.out.println("Solo una vez please");
             placas_dia.add(lett2);
             CARROS = 1;
         }
         else if(placas_dia.isEmpty()==false && placas_dia.contains(lett2)==false){
-            System.out.println("mas de una creo");
+            //System.out.println("mas de una creo");
             placas_dia.add(lett2);
             CARROS ++;
         }
         else{
-            System.out.println("Repetida. ");
+            //System.out.println("Repetida. ");
             this.genera_placa();
         }
   //}
 }
 
 public void genera_placa_moto(){
-    int i,j,cm,tm,b;
+    int i,j,tm;
     for(i=0;i<3;i++){
         if(i==0){
         al_m[i]= (int) ((Math.random()*9)+1);
@@ -85,7 +85,7 @@ public void genera_placa_moto(){
         else if(i>0){
             al_m[i] = (int) (Math.random()*9);
         }
-    System.out.println("\t Numero : "+al_m[i]);
+    //System.out.println("\t Numero : "+al_m[i]);
     }
     for(i=0;i<4;i++){
         tm = (int) (Math.random()*26);
@@ -96,26 +96,26 @@ public void genera_placa_moto(){
             ulet_m = let[tm];
         }
     }
-    System.out.println("Letras moto: "+let_m[0]+"--"+let_m[1]+"--"+let_m[2]+"\t\t"+ulet_m);
+    //System.out.println("Letras moto: "+let_m[0]+"--"+let_m[1]+"--"+let_m[2]+"\t\t"+ulet_m);
     numo = (al_m[1]*1)+(al_m[0]*10);
-    System.out.println("NUMO : "+numo);
+    //System.out.println("NUMO : "+numo);
     lett1_m = Integer.toString(numo);
-    System.out.println("String de numeros : "+lett1_m);
+    //System.out.println("String de numeros : "+lett1_m);
     lett2_m = (Character.toString(let_m[0]))+(Character.toString(let_m[1]))+(Character.toString(let_m[2]))+lett1_m+(Character.toString(ulet_m));
-    System.out.println("PLACA MOTO : " + lett2_m);
+    //System.out.println("PLACA MOTO : " + lett2_m);
     lett2 = lett2_m;
     if(placas_dia.isEmpty() == true){
-            System.out.println("Solo una vez please");
+            //System.out.println("Solo una vez please");
             placas_dia.add(lett2);
             MOTOS = 1;
         }
         else if(placas_dia.isEmpty()==false && placas_dia.contains(lett2)==false){
-            System.out.println("mas de una creo");
+            //System.out.println("mas de una creo");
             placas_dia.add(lett2);
             MOTOS ++;            
         }
         else{
-            System.out.println("Repetida. ");
+            //System.out.println("Repetida. ");
             this.genera_placa_moto();
         }
 }
@@ -125,7 +125,6 @@ public String pasa_placa(){
     System.out.println("Lista :   "+placas_dia);
     return lett2;
     }
-
 
 public int cantidad_carros(){
     System.out.println("Cantidad de carros : " + CARROS);

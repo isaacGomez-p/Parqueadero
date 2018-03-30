@@ -6,6 +6,7 @@
 package jitems;
 
 import javax.swing.JOptionPane;
+import placas.Ubicacion;
 import placas.Vehiculo;
 
 /**
@@ -15,6 +16,9 @@ import placas.Vehiculo;
 public class Jprincipal extends javax.swing.JFrame {
     
     Vehiculo obj1= new Vehiculo();
+    Ubicacion obj2 = new Ubicacion();
+    
+    
     /**
      * Creates new form Jprincipal
      */
@@ -31,6 +35,7 @@ public class Jprincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         nuevo_carro = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -40,6 +45,11 @@ public class Jprincipal extends javax.swing.JFrame {
         jMoto = new javax.swing.JButton();
         jCantidadCarros = new javax.swing.JButton();
         jCantidadMotos = new javax.swing.JButton();
+        jPiso1 = new javax.swing.JButton();
+        jPiso2 = new javax.swing.JButton();
+        jPiso3 = new javax.swing.JButton();
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -96,6 +106,27 @@ public class Jprincipal extends javax.swing.JFrame {
             }
         });
 
+        jPiso1.setText("Cantidad Piso 1");
+        jPiso1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPiso1ActionPerformed(evt);
+            }
+        });
+
+        jPiso2.setText("Cantidad Piso 2");
+        jPiso2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPiso2ActionPerformed(evt);
+            }
+        });
+
+        jPiso3.setText("Cantidad Piso 3");
+        jPiso3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPiso3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -105,40 +136,49 @@ public class Jprincipal extends javax.swing.JFrame {
                 .addComponent(jSalir)
                 .addGap(60, 60, 60))
             .addGroup(layout.createSequentialGroup()
+                .addGap(136, 136, 136)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(232, 238, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nuevo_carro)
+                    .addComponent(jMoto))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(105, 105, 105)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
-                        .addGap(36, 36, 36)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jMoto)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jCantidadMotos))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(nuevo_carro)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                                .addComponent(jCantidadCarros))))
+                        .addComponent(jCantidadCarros)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jCantidadMotos))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(72, 72, 72))
+                        .addComponent(jPiso1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPiso2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPiso3)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nuevo_carro)
                     .addComponent(jLabel1)
-                    .addComponent(jCantidadCarros))
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jMoto)
+                    .addComponent(nuevo_carro)
+                    .addComponent(jCantidadCarros)
                     .addComponent(jCantidadMotos))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jMoto)
+                        .addComponent(jPiso1)
+                        .addComponent(jPiso2)
+                        .addComponent(jPiso3)))
                 .addGap(46, 46, 46)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -156,7 +196,11 @@ public class Jprincipal extends javax.swing.JFrame {
         String placa = new String();
         placa = obj1.pasa_placa();
         jPlaca.setText(placa+"\nCarro");
+        obj2.genera_lugar(1);
+        String posicion;
+        posicion = obj2.get_posicion();
         
+        jPlaca.setText(placa+"\nCarro"+"\nlugar: "+posicion);
     }//GEN-LAST:event_nuevo_carroActionPerformed
 
     private void jSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSalirActionPerformed
@@ -171,6 +215,11 @@ public class Jprincipal extends javax.swing.JFrame {
         String placa;
         placa = obj1.pasa_placa();
         jPlaca.setText(placa+"\nMoto");
+        obj2.genera_lugar(2);
+        String posicion;
+        posicion = obj2.get_posicion();
+        
+        jPlaca.setText(placa+"\nMoto"+"\nlugar: "+posicion);
     }//GEN-LAST:event_jMotoActionPerformed
 
     private void jCantidadCarrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCantidadCarrosActionPerformed
@@ -195,6 +244,27 @@ public class Jprincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         jPlaca.setEnabled(false);
     }//GEN-LAST:event_jPlacaKeyPressed
+
+    private void jPiso1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPiso1ActionPerformed
+        // TODO add your handling code here:
+        int c1;
+        c1 = obj2.get_cant1();
+        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.WARNING_MESSAGE);
+    }//GEN-LAST:event_jPiso1ActionPerformed
+
+    private void jPiso2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPiso2ActionPerformed
+        // TODO add your handling code here:
+        int c2;
+        c2 = obj2.get_cant2();
+        JOptionPane.showMessageDialog(this, "Hay "+ c2 + " vehiculos en este momento.","PISO 2", JOptionPane.WARNING_MESSAGE);
+    }//GEN-LAST:event_jPiso2ActionPerformed
+
+    private void jPiso3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPiso3ActionPerformed
+        // TODO add your handling code here:
+        int c3;
+        c3 = obj2.get_cant3();
+        JOptionPane.showMessageDialog(this, "Hay "+ c3 + " vehiculos en este momento.","PISO 3", JOptionPane.WARNING_MESSAGE);
+    }//GEN-LAST:event_jPiso3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,11 +302,15 @@ public class Jprincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jCantidadCarros;
     private javax.swing.JButton jCantidadMotos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton jMoto;
+    private javax.swing.JButton jPiso1;
+    private javax.swing.JButton jPiso2;
+    private javax.swing.JButton jPiso3;
     private javax.swing.JTextPane jPlaca;
     private javax.swing.JButton jSalir;
     private javax.swing.JScrollPane jScrollPane1;
