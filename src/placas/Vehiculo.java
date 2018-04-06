@@ -5,6 +5,8 @@
  */
 package placas;
 
+import java.time.LocalDateTime;
+import java.time.Month;
 import java.util.ArrayList;
 
 /**
@@ -15,6 +17,7 @@ public final class Vehiculo {
 ArrayList<String> placas_dia = new ArrayList();    
 String lett,lett1,lett2,lett3 = new String();
 String lett_m,lett1_m,lett2_m,lett3_m = new String();
+String hora_1,fecha_1;
 int CARROS = 0;
 int MOTOS = 0;
 int num[]= new int[] {0,1,2,3,4,5,6,7,8,9};
@@ -32,10 +35,35 @@ Integer[] al = new Integer[3];
 Integer[] al_m = new Integer [3];
 
 public Vehiculo(){
-    //this.genera_placa();
+    this.genera_hora();
+}
+public void genera_hora(){
+    String ho;
+    LocalDateTime ahora = LocalDateTime.now();
+    int hora = ahora.getHour();
+    int seg = ahora.getSecond();
+    int min = ahora.getMinute();
+    if(min<10){
+    ho = hora+": 0"+min+":"+seg;
+    System.out.println("la hora es: "+hora+": 0"+min+":"+seg);}
+    else {
+    ho = hora+":"+min+":"+seg;
+    System.out.println("la hora es: "+hora+":"+min+":"+seg);}
+    
+    int year = ahora.getYear();
+    Month mes = ahora.getMonth();
+    String mes_ = mes.toString();
+    int dia = ahora.getDayOfMonth();
+    System.out.println("La fecha es: "+dia+"de :"+mes+"del mes_ : "+mes_+"del año"+year);
+    String fecha = Integer.toString(year)+"-"+mes_+"-"+Integer.toString(dia);
+    System.out.println("FECHA: "+fecha);
+    
+    set_hora(ho);
+    set_fecha(fecha);
+    
 }
 public void genera_placa(){
-    	int al_c,tm,cm;
+    	int al_c,tm;
 
 //for(tm=1;tm<=CANT_MUNI;tm++){
 
@@ -135,4 +163,21 @@ public int cantidad_motos(){
     System.out.println("Cantidad de motos: "+ MOTOS);
     return MOTOS;
 }
+
+public void set_fecha(String fecha_){
+    fecha_1 = fecha_;
+    
 }
+public String get_fecha(){
+    return fecha_1;
+}
+
+public void set_hora(String hora_){
+    hora_1 = hora_;
+    
+}
+public String get_hora(){
+    return hora_1;
+}
+}
+

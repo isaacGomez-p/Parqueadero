@@ -193,6 +193,11 @@ public class Jprincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.out.println("Placa nueva");
         obj1.genera_placa();
+        
+        String fecha = obj1.get_fecha();
+        String hora = obj1.get_hora();
+        JOptionPane.showMessageDialog(this, "Fecha: "+ fecha + " Hora: "+hora,"VEHICULO INGRESADO", JOptionPane.OK_OPTION);
+        
         String placa = new String();
         placa = obj1.pasa_placa();
         jPlaca.setText(placa+"\nCarro");
@@ -210,14 +215,18 @@ public class Jprincipal extends javax.swing.JFrame {
 
     private void jMotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMotoActionPerformed
         // TODO add your handling code here:
-        System.out.println("Placa nueva");
+        System.out.println("\n\nPlaca nueva");
         obj1.genera_placa_moto();
+        String fecha = obj1.get_fecha();
+        String hora = obj1.get_hora();
+        JOptionPane.showMessageDialog(this, "Fecha: "+ fecha + " Hora: "+hora,"VEHICULO INGRESADO", JOptionPane.OK_OPTION);
         String placa;
         placa = obj1.pasa_placa();
         jPlaca.setText(placa+"\nMoto");
         obj2.genera_lugar(2);
         String posicion;
         posicion = obj2.get_posicion();
+        
         
         jPlaca.setText(placa+"\nMoto"+"\nlugar: "+posicion);
     }//GEN-LAST:event_jMotoActionPerformed
