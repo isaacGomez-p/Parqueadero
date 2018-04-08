@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package placas;
+package vehiculo;
 
 import java.time.LocalDateTime;
 import java.time.Month;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
  *
  * @author ISAACELEAZAR
  */
-public final class Vehiculo {
+public final class Genera_vehiculo {
 ArrayList<String> placas_dia = new ArrayList();    
 String lett,lett1,lett2,lett3 = new String();
 String lett_m,lett1_m,lett2_m,lett3_m = new String();
@@ -34,7 +34,7 @@ int numbers;
 Integer[] al = new Integer[3];
 Integer[] al_m = new Integer [3];
 
-public Vehiculo(){
+public Genera_vehiculo(){
     this.genera_hora();
 }
 public void genera_hora(){
