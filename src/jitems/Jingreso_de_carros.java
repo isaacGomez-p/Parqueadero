@@ -13,12 +13,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import jitems.Jpiso_uno;
 import javax.swing.JOptionPane;
 import vehiculo.Ubicacion;
 import vehiculo.Genera_vehiculo;
@@ -409,7 +407,7 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
         String qry ="INSERT INTO vehiculo_ingreso (placa,ubicacion,fecha_ingreso,hora_ingreso)VALUES ('"+this.placa_bd+"','"+this.ubicacion_bd+"','"+this.fecha_ingreso_bd+"','"+this.hora_ingreso_bd+"')";
         try{
             stmt.executeUpdate(qry);
-            JOptionPane.showMessageDialog(this,"Bien","Correcto",JOptionPane.OK_OPTION);
+            JOptionPane.showMessageDialog(this,"Datos ingresados en la base de datos.","Correcto",JOptionPane.NO_OPTION);
         }catch(SQLDataException e){
             System.out.printf("Error al grabar");
         } catch (SQLException ex) {
@@ -429,14 +427,14 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
         // TODO add your handling code here:
         int n;
         n = obj1.cantidad_motos();
-        JOptionPane.showMessageDialog(this, "Hay "+ n + " moto(s) en este momento.","", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Hay "+ n + " moto(s) en este momento.","", JOptionPane.PLAIN_MESSAGE);
     }                                          
 
     private void cCarro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCarro1ActionPerformed
         // TODO add your handling code here:
         int c1;
         c1 = obj2.get_cCant1();
-        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.PLAIN_MESSAGE);
     }//GEN-LAST:event_cCarro1ActionPerformed
 
     private void Ver_piso1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ver_piso1ActionPerformed
@@ -461,63 +459,63 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
         // TODO add your handling code here:
         int n;
         n = obj1.cantidad_carros();
-        JOptionPane.showMessageDialog(this, "Hay "+ n + " carro(s) en este momento.","", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Hay "+ n + " carro(s) en este momento.","", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_totalCarrosActionPerformed
 
     private void tVehiculos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tVehiculos1ActionPerformed
         // TODO add your handling code here:
         int c1;
         c1 = obj2.get_cant1();
-        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_tVehiculos1ActionPerformed
 
     private void tVehiculos2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tVehiculos2ActionPerformed
         // TODO add your handling code here:
         int c2;
         c2 = obj2.get_cant2();
-        JOptionPane.showMessageDialog(this, "Hay "+ c2 + " vehiculos en este momento.","PISO 2", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Hay "+ c2 + " vehiculos en este momento.","PISO 2", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_tVehiculos2ActionPerformed
 
     private void tVehiculos3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tVehiculos3ActionPerformed
         // TODO add your handling code here:
         int c3;
         c3 = obj2.get_cant3();
-        JOptionPane.showMessageDialog(this, "Hay "+ c3 + " vehiculos en este momento.","PISO 3", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Hay "+ c3 + " vehiculos en este momento.","PISO 3", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_tVehiculos3ActionPerformed
 
     private void cCarro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCarro2ActionPerformed
         // TODO add your handling code here:
         int c1;
         c1 = obj2.get_cCant2();
-        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_cCarro2ActionPerformed
 
     private void cCarro3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCarro3ActionPerformed
         // TODO add your handling code here:
         int c1;
         c1 = obj2.get_cCant3();
-        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_cCarro3ActionPerformed
 
     private void cMoto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cMoto1ActionPerformed
         // TODO add your handling code here:
         int c1;
         c1 = obj2.get_mCant1();
-        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_cMoto1ActionPerformed
 
     private void cMoto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cMoto2ActionPerformed
         // TODO add your handling code here:
         int c1;
         c1 = obj2.get_mCant2();
-        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_cMoto2ActionPerformed
 
     private void cMoto3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cMoto3ActionPerformed
         // TODO add your handling code here:
         int c1;
         c1 = obj2.get_mCant3();
-        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_cMoto3ActionPerformed
 
     /**
