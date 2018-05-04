@@ -38,9 +38,9 @@ public final class Ubicacion {
         }
         a = let[piso];
         if(ind == 1){
-            n_lugar = (int) ((Math.random()*80)+1);}
+            n_lugar = (int) ((Math.random()*40)+1);}
         else if(ind == 2){
-            n_lugar = (int) ((Math.random()*(100-81+1)+80));}
+            n_lugar = (int) ((Math.random()*(50-41+1)+40));}
         System.out.println("lugar: "+n_lugar+"\nPiso"+piso);
         pos = Character.toString(a)+Integer.toString(n_lugar);
         System.out.println("Posicion : "+pos);

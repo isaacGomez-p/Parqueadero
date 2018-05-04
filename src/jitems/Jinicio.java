@@ -15,6 +15,7 @@ public class Jinicio extends javax.swing.JFrame {
      * Creates new form Jinicio
      */
     Jacceso obj1 = new Jacceso();
+    Jingreso_de_carros obj2 = new Jingreso_de_carros();
     public Jinicio() {
         initComponents();
     }
@@ -98,8 +99,8 @@ public class Jinicio extends javax.swing.JFrame {
 
     private void BadminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BadminActionPerformed
         // TODO add your handling code here:
-        obj1.setVisible(true);
-        obj1.setLocationRelativeTo(null);
+        obj2.setVisible(true);
+        obj2.setLocationRelativeTo(null);
         this.dispose();        
         
     }//GEN-LAST:event_BadminActionPerformed
