@@ -16,6 +16,7 @@ public final class Ubicacion {
     char let[]=new char[] {'A','B','C'};
     char a;
     int n_lugar_, ind, cant1=0, cant2=0, cant3=0;
+    int cCant1=0,mCant1=0,cCant2=0,mCant2=0,cCant3=0,mCant3=0;
     String pos, piso_ = new String();
     
         
@@ -38,9 +39,37 @@ public final class Ubicacion {
         }
         a = let[piso];
         if(ind == 1){
-            n_lugar = (int) ((Math.random()*40)+1);}
+            n_lugar = (int) ((Math.random()*40)+1);
+            switch (piso) {
+            case 0:
+                cCant1++;
+                break;
+            case 1:
+                cCant2++;
+                break;
+            case 2:
+                cCant3++;
+                break;
+            default:
+                break;
+            }
+        }
         else if(ind == 2){
-            n_lugar = (int) ((Math.random()*(50-41+1)+40));}
+            n_lugar = (int) ((Math.random()*(50-41+1)+40));
+            switch (piso) {
+            case 0:
+                mCant1++;
+                break;
+            case 1:
+                mCant2++;
+                break;
+            case 2:
+                mCant3++;
+                break;
+            default:
+                break;
+            }
+        }
         System.out.println("lugar: "+n_lugar+"\nPiso"+piso);
         pos = Character.toString(a)+Integer.toString(n_lugar);
         System.out.println("Posicion : "+pos);
@@ -94,5 +123,52 @@ public final class Ubicacion {
         return cant3;
     }
     
+    public void set_cCant1(int cC1_){
+        cCant1 = cC1_;
+    }
+    
+    public int get_cCant1(){
+        return cCant1;
+    }
+    
+    public void set_cCant2(int cC2_){
+        cCant2 = cC2_;
+    }
+    
+    public int get_cCant2(){
+        return cCant2;
+    }
+    
+    public void set_cCant3(int cC3_){
+        cCant1 = cC3_;
+    }
+    
+    public int get_cCant3(){
+        return cCant3;
+    }
+    
+    public void set_mCant1(int mC1_){
+        mCant1 = mC1_;
+    }
+    
+    public int get_mCant1(){
+        return mCant1;
+    }
+    
+    public void set_mCant2(int mC2_){
+        mCant2 = mC2_;
+    }
+    
+    public int get_mCant2(){
+        return mCant2;
+    }
+    
+    public void set_mCant3(int mC3_){
+        mCant1 = mC3_;
+    }
+    
+    public int get_mCant3(){
+        return mCant3;
+    }
    
 }
