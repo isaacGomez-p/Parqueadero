@@ -8,6 +8,7 @@ package vehiculo;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
@@ -44,8 +45,14 @@ public void genera_hora(){
     int seg = ahora.getSecond();
     int min = ahora.getMinute();
     if(min<10){
-    ho = hora+": 0"+min+":"+seg;
+    ho = hora+":0"+min+":"+seg;
     System.out.println("la hora es: "+hora+": 0"+min+":"+seg);}
+    else if(seg<10&&min<10){
+        ho= hora+":0"+min+":0"+seg;
+    }
+    else if(seg<10){
+        ho = hora+":"+min+":0"+seg;
+    }
     else {
     ho = hora+":"+min+":"+seg;
     System.out.println("la hora es: "+hora+":"+min+":"+seg);}
@@ -55,7 +62,8 @@ public void genera_hora(){
     String mes_ = mes.toString();
     int dia = ahora.getDayOfMonth();
     System.out.println("La fecha es: "+dia+"de :"+mes+"del mes_ : "+mes_+"del año"+year);
-    String fecha = Integer.toString(year)+"-"+mes_+"-"+Integer.toString(dia);
+    String fecha = Integer.toString(dia)+"/"+ahora.getMonthValue()+"/"+Integer.toString(year);
+    
     System.out.println("FECHA: "+fecha);
     
     set_hora(ho);

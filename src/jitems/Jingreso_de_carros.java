@@ -5,6 +5,19 @@
  */
 package jitems;
 
+import java.sql.Connection;
+import java.util.Date;
+import java.sql.ResultSet;
+import java.sql.SQLDataException;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import jitems.Jpiso_uno;
 import javax.swing.JOptionPane;
 import vehiculo.Ubicacion;
@@ -15,9 +28,18 @@ import vehiculo.Genera_vehiculo;
  * @author ISAACELEAZAR
  */
 public class Jingreso_de_carros extends javax.swing.JFrame {
+    SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("H:mm:ss");
     
     Genera_vehiculo obj1= new Genera_vehiculo();
     Ubicacion obj2 = new Ubicacion();
+    Connection con=null;
+    Statement stmt=null;
+    ResultSet rs=null;
+    
+    String placa_bd, ubicacion_bd;
+    Date fecha_ingreso_bd;
+    LocalTime hora_ingreso_bd;
     
     Jpiso_uno Opisouno = new Jpiso_uno();
     Jpiso_dos Opisodos = new Jpiso_dos();
@@ -26,8 +48,10 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
     /**
      * Creates new form Jprincipal
      */
-    public Jingreso_de_carros() {
+    public Jingreso_de_carros(Connection con_, Statement stmt_) {
         initComponents();
+        this.con = con_;
+        this.stmt = stmt_;
     }
 
     /**
@@ -324,6 +348,19 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
         posicion = obj2.get_posicion();
         
         jPlaca.setText(placa+"\nCarro"+"\nlugar: "+posicion);
+        
+        this.placa_bd=placa;
+        this.ubicacion_bd = posicion;
+            
+        try {
+            this.fecha_ingreso_bd = (Date) formateador.parse(fecha);
+        } catch (ParseException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       this.hora_ingreso_bd = LocalTime.parse(hora);
+       System.out.println("hora"+hora_ingreso_bd);
+       this.ingresaBD();
+            
     }//GEN-LAST:event_nuevo_carroActionPerformed
 
     private void jSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSalirActionPerformed
@@ -348,23 +385,52 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
         
         
         jPlaca.setText(placa+"\nMoto"+"\nlugar: "+posicion);
+        
+        this.placa_bd=placa;
+        this.ubicacion_bd = posicion;
+            
+        try {
+            this.fecha_ingreso_bd = (Date) formateador.parse(fecha);
+        } catch (ParseException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       this.hora_ingreso_bd = LocalTime.parse(hora);
+       System.out.println("hora"+hora_ingreso_bd);
+       this.ingresaBD();
+        
+        
     }//GEN-LAST:event_jMotoActionPerformed
 
     private void jScrollPane1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jScrollPane1FocusLost
         // TODO add your handling code here:
     }//GEN-LAST:event_jScrollPane1FocusLost
 
+    public void ingresaBD(){
+        String qry ="INSERT INTO vehiculo_ingreso (placa,ubicacion,fecha_ingreso,hora_ingreso)VALUES ('"+this.placa_bd+"','"+this.ubicacion_bd+"','"+this.fecha_ingreso_bd+"','"+this.hora_ingreso_bd+"')";
+        try{
+            stmt.executeUpdate(qry);
+            JOptionPane.showMessageDialog(this,"Bien","Correcto",JOptionPane.OK_OPTION);
+        }catch(SQLDataException e){
+            System.out.printf("Error al grabar");
+        } catch (SQLException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
     private void jPlacaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPlacaKeyPressed
         // TODO add your handling code here:
         jPlaca.setEnabled(false);
     }//GEN-LAST:event_jPlacaKeyPressed
 
-    private void totalMotosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalMotosActionPerformed
+    private void totalMotosActionPerformed(java.awt.event.ActionEvent evt) {                                           
+
+    
+
         // TODO add your handling code here:
         int n;
         n = obj1.cantidad_motos();
         JOptionPane.showMessageDialog(this, "Hay "+ n + " moto(s) en este momento.","", JOptionPane.WARNING_MESSAGE);
-    }//GEN-LAST:event_totalMotosActionPerformed
+    }                                          
 
     private void cCarro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCarro1ActionPerformed
         // TODO add your handling code here:
@@ -483,11 +549,7 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Jingreso_de_carros().setVisible(true);
-            }
-        });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

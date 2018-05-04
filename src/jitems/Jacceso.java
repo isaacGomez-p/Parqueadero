@@ -162,7 +162,7 @@ public class Jacceso extends javax.swing.JFrame {
                 con = obc.con();
                 stmt = obc.stamt();
                 
-                Jingreso_de_carros obj1 = new Jingreso_de_carros();
+                Jingreso_de_carros obj1 = new Jingreso_de_carros(con,stmt);
                 obj1.setVisible(true);
                 obj1.setLocationRelativeTo(null);
             }

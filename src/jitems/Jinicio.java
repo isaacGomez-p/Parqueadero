@@ -15,7 +15,7 @@ public class Jinicio extends javax.swing.JFrame {
      * Creates new form Jinicio
      */
     Jacceso obj1 = new Jacceso();
-    Jingreso_de_carros obj2 = new Jingreso_de_carros();
+    
     public Jinicio() {
         initComponents();
     }
