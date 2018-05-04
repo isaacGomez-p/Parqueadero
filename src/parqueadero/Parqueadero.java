@@ -5,6 +5,7 @@
  */
 package parqueadero;
 
+import jitems.Jingreso_de_carros;
 import jitems.Jinicio;
 
 /**
@@ -19,6 +20,7 @@ public class Parqueadero {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        //Jingreso_de_carros obj1 = new Jingreso_de_carros();
         Jinicio obj1 = new Jinicio();
         obj1.setVisible(true);
         obj1.setLocationRelativeTo(null);

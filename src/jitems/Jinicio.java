@@ -99,8 +99,8 @@ public class Jinicio extends javax.swing.JFrame {
 
     private void BadminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BadminActionPerformed
         // TODO add your handling code here:
-        obj2.setVisible(true);
-        obj2.setLocationRelativeTo(null);
+        obj1.setVisible(true);
+        obj1.setLocationRelativeTo(null);
         this.dispose();        
         
     }//GEN-LAST:event_BadminActionPerformed

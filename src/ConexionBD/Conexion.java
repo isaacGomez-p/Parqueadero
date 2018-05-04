@@ -9,7 +9,7 @@ public class Conexion {
 	//String driver="com.mysql.jdbc.Driver";
         String driver = "org.postgresql.Driver";
 	//String url="jdbc:mysql://localhost:3306/acuario"; /** este nombre es el nombre de la base de datos? */
-        String url= "jdbc:postgresql://localhost:5432/Parqueadero";
+        String url= "jdbc:postgresql://localhost:5432/parqueadero";
         String user,contra,aviso1,aviso2;
 	int indica1,indica2;
 	Connection con=null;
