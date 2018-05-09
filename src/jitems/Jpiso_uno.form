@@ -28,6 +28,10 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="192" max="-2" attributes="0"/>
+                              <Component id="Bsalir" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="La1" min="-2" pref="30" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -37,21 +41,22 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="La4" min="-2" pref="30" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="La5" min="-2" pref="30" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="La6" min="-2" pref="30" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="La7" min="-2" pref="30" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="La8" min="-2" pref="30" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="La9" min="-2" pref="30" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="La10" min="-2" pref="30" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="221" max="-2" attributes="0"/>
-                              <Component id="Lpiso1" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="Lpiso1" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="La5" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="La6" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="La7" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="La8" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="La9" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="La10" min="-2" pref="30" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -123,22 +128,242 @@
                               <Component id="La40" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="Bsalir" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Component id="La41" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="Lb11" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Lb12" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Lb13" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Lb14" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Lb15" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Lb16" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Lb17" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Lb18" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Lb19" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="Lb20" min="-2" pref="31" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Lb21" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Lb22" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Lb23" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Lb24" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Lb25" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="Lb26" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Lb27" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Lb28" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="Lb29" min="-2" pref="31" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="Lb30" min="-2" pref="31" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Lc41" min="-2" pref="30" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="La42" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="Lc42" min="-2" pref="30" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="La43" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="Lc43" min="-2" pref="30" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="La44" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="Lc44" min="-2" pref="30" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="La45" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="Lc45" min="-2" pref="30" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="La46" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="Lc46" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc47" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc48" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc49" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc50" min="-2" pref="30" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Lb31" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lb32" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lb33" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lb34" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lb35" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lb36" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lb37" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lb38" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lb39" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lb40" min="-2" pref="31" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Lc31" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc32" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc33" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc34" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc35" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc36" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc37" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc38" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc39" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc40" min="-2" pref="30" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Lc21" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc22" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc23" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc24" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc25" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc26" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc27" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc28" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc29" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc30" min="-2" pref="30" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Lc1" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc2" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc4" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc5" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc6" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc7" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc8" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc9" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc10" min="-2" pref="30" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Lc11" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc12" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc13" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc14" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc15" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc16" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc17" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc18" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc19" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lc20" min="-2" pref="30" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Lb41" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lb42" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lb43" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lb44" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="Lpiso3" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Component id="Lb45" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="Lb46" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="Lb47" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="Lb48" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="Lb49" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="Lb50" min="-2" pref="31" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Lb1" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lb2" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lb3" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="Lb4" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="Lpiso2" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Component id="Lb5" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="Lb6" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="Lb7" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="Lb8" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="Lb9" min="-2" pref="31" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="Lb10" min="-2" pref="31" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
                               </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="La41" min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="La42" min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="La43" min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="La44" min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="La45" min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="La46" min="-2" pref="30" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="La47" min="-2" pref="30" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -225,7 +450,147 @@
                   <Component id="La49" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="La50" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="29" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="Lpiso2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Lb1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb9" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb10" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Lb11" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb12" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb13" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb14" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb15" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb16" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb17" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb18" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb19" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb20" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Lb21" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb22" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb23" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb24" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb26" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb27" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb25" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb28" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb29" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lb30" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="Lb31" alignment="1" min="-2" pref="14" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="Lb32" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb33" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb34" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb35" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb36" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb37" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb38" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb39" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb40" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="Lb50" alignment="1" min="-2" pref="14" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="Lb41" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb42" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb43" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb44" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb45" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb46" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb47" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb48" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lb49" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="Lpiso3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Lc1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc9" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc10" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="Lc11" alignment="1" min="-2" pref="14" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="Lc12" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lc13" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lc14" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lc15" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lc16" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lc17" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lc18" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lc19" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Lc20" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Lc21" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc22" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc23" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc24" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc25" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc26" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc27" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc28" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc29" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc30" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Lc31" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc32" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc33" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc34" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc35" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc36" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc37" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc38" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc39" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc40" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Lc41" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc42" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc43" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc44" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc45" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc46" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc47" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc48" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc49" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Lc50" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="30" max="32767" attributes="0"/>
               <Component id="Bsalir" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -236,7 +601,7 @@
     <Component class="javax.swing.JLabel" name="La1">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A1"/>
       </Properties>
@@ -244,7 +609,7 @@
     <Component class="javax.swing.JLabel" name="La2">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A2"/>
       </Properties>
@@ -252,7 +617,7 @@
     <Component class="javax.swing.JLabel" name="La3">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A3"/>
       </Properties>
@@ -260,7 +625,7 @@
     <Component class="javax.swing.JLabel" name="La4">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A4"/>
       </Properties>
@@ -268,7 +633,7 @@
     <Component class="javax.swing.JLabel" name="La5">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A5"/>
       </Properties>
@@ -276,7 +641,7 @@
     <Component class="javax.swing.JLabel" name="La6">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A6"/>
       </Properties>
@@ -284,7 +649,7 @@
     <Component class="javax.swing.JLabel" name="La7">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A7"/>
       </Properties>
@@ -292,7 +657,7 @@
     <Component class="javax.swing.JLabel" name="La8">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A8"/>
       </Properties>
@@ -300,7 +665,7 @@
     <Component class="javax.swing.JLabel" name="La9">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A9"/>
       </Properties>
@@ -308,7 +673,7 @@
     <Component class="javax.swing.JLabel" name="La10">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A10"/>
       </Properties>
@@ -321,7 +686,7 @@
     <Component class="javax.swing.JLabel" name="La11">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A11"/>
       </Properties>
@@ -329,7 +694,7 @@
     <Component class="javax.swing.JLabel" name="La12">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A12"/>
       </Properties>
@@ -337,7 +702,7 @@
     <Component class="javax.swing.JLabel" name="La13">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A13"/>
       </Properties>
@@ -345,7 +710,7 @@
     <Component class="javax.swing.JLabel" name="La14">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A14"/>
       </Properties>
@@ -353,7 +718,7 @@
     <Component class="javax.swing.JLabel" name="La15">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A15"/>
       </Properties>
@@ -361,7 +726,7 @@
     <Component class="javax.swing.JLabel" name="La16">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A16"/>
       </Properties>
@@ -369,7 +734,7 @@
     <Component class="javax.swing.JLabel" name="La17">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A17"/>
       </Properties>
@@ -377,7 +742,7 @@
     <Component class="javax.swing.JLabel" name="La18">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A18"/>
       </Properties>
@@ -385,7 +750,7 @@
     <Component class="javax.swing.JLabel" name="La19">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A19"/>
       </Properties>
@@ -393,7 +758,7 @@
     <Component class="javax.swing.JLabel" name="La20">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A20"/>
       </Properties>
@@ -401,7 +766,7 @@
     <Component class="javax.swing.JLabel" name="La21">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A21"/>
       </Properties>
@@ -409,7 +774,7 @@
     <Component class="javax.swing.JLabel" name="La22">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A22"/>
       </Properties>
@@ -417,7 +782,7 @@
     <Component class="javax.swing.JLabel" name="La23">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A23"/>
       </Properties>
@@ -425,7 +790,7 @@
     <Component class="javax.swing.JLabel" name="La24">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A24"/>
       </Properties>
@@ -433,7 +798,7 @@
     <Component class="javax.swing.JLabel" name="La25">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A25"/>
       </Properties>
@@ -441,7 +806,7 @@
     <Component class="javax.swing.JLabel" name="La26">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A26"/>
       </Properties>
@@ -449,7 +814,7 @@
     <Component class="javax.swing.JLabel" name="La27">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A27"/>
       </Properties>
@@ -457,7 +822,7 @@
     <Component class="javax.swing.JLabel" name="La28">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A28"/>
       </Properties>
@@ -465,7 +830,7 @@
     <Component class="javax.swing.JLabel" name="La29">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A29"/>
       </Properties>
@@ -473,7 +838,7 @@
     <Component class="javax.swing.JLabel" name="La30">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A30"/>
       </Properties>
@@ -481,7 +846,7 @@
     <Component class="javax.swing.JLabel" name="La31">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A31"/>
       </Properties>
@@ -489,7 +854,7 @@
     <Component class="javax.swing.JLabel" name="La32">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A32"/>
       </Properties>
@@ -497,7 +862,7 @@
     <Component class="javax.swing.JLabel" name="La33">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A33"/>
       </Properties>
@@ -505,7 +870,7 @@
     <Component class="javax.swing.JLabel" name="La34">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A34"/>
       </Properties>
@@ -513,7 +878,7 @@
     <Component class="javax.swing.JLabel" name="La35">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A35"/>
       </Properties>
@@ -521,7 +886,7 @@
     <Component class="javax.swing.JLabel" name="La36">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A36"/>
       </Properties>
@@ -529,7 +894,7 @@
     <Component class="javax.swing.JLabel" name="La37">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A37"/>
       </Properties>
@@ -537,7 +902,7 @@
     <Component class="javax.swing.JLabel" name="La38">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A38"/>
       </Properties>
@@ -545,7 +910,7 @@
     <Component class="javax.swing.JLabel" name="La39">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A39"/>
       </Properties>
@@ -553,7 +918,7 @@
     <Component class="javax.swing.JLabel" name="La40">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A40"/>
       </Properties>
@@ -561,7 +926,7 @@
     <Component class="javax.swing.JLabel" name="La41">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A41"/>
       </Properties>
@@ -569,7 +934,7 @@
     <Component class="javax.swing.JLabel" name="La42">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A42"/>
       </Properties>
@@ -577,7 +942,7 @@
     <Component class="javax.swing.JLabel" name="La43">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A43"/>
       </Properties>
@@ -585,7 +950,7 @@
     <Component class="javax.swing.JLabel" name="La44">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A44"/>
       </Properties>
@@ -593,7 +958,7 @@
     <Component class="javax.swing.JLabel" name="La45">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A45"/>
       </Properties>
@@ -601,7 +966,7 @@
     <Component class="javax.swing.JLabel" name="La46">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A46"/>
       </Properties>
@@ -609,7 +974,7 @@
     <Component class="javax.swing.JLabel" name="La47">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A47"/>
       </Properties>
@@ -617,7 +982,7 @@
     <Component class="javax.swing.JLabel" name="La48">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A48"/>
       </Properties>
@@ -625,7 +990,7 @@
     <Component class="javax.swing.JLabel" name="La49">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A49"/>
       </Properties>
@@ -633,7 +998,7 @@
     <Component class="javax.swing.JLabel" name="La50">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="ff" type="rgb"/>
+          <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="A50"/>
       </Properties>
@@ -645,6 +1010,816 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BsalirActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lpiso2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="PISO 2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb43">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B43"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb44">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B44"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb45">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B45"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb46">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B46"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb47">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B47"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb48">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B48"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb49">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B49"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb50">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B50"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb9">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B9"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb10">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B10"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb11">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B11"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb12">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B12"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb13">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B13"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb14">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B14"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb15">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B15"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb16">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B16"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb17">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B17"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb18">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B18"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb1">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb2">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb3">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb4">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb5">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B5"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb6">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B6"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb7">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B7"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb8">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B8"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb19">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B19"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb20">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B20"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb21">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B21"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb22">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B22"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb23">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B23"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb24">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B24"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb25">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B25"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb26">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B26"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb27">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B27"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb28">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B28"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb29">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B29"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb30">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B30"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb31">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B31"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb32">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B32"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb33">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B33"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb34">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B34"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb35">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B35"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb36">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B36"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb37">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B37"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb38">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B38"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb39">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B39"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb40">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B40"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb41">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B41"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lb42">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="B42"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lpiso3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="PISO 3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc31">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C31"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc32">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C32"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc33">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C33"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc34">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C34"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc35">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C35"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc36">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C36"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc37">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C37"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc38">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C38"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc39">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C39"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc40">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C40"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc1">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc2">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc3">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc4">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc5">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C5"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc6">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C6"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc7">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C7"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc8">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C8"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc41">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C41"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc9">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C9"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc42">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C42"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc10">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C10"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc43">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C43"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc44">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C44"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc45">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C45"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc46">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C46"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc47">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C47"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc48">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C48"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc49">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C49"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc50">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C50"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc11">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C11"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc12">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C12"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc13">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C13"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc14">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C14"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc15">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C15"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc16">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C16"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc17">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C17"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc18">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C18"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc19">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C19"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc20">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C20"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc21">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C21"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc22">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C22"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc23">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C23"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc24">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C24"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc25">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C25"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc26">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C26"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc27">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C27"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc28">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C28"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc29">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C29"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Lc30">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C30"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

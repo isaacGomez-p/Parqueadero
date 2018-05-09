@@ -39,9 +39,9 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
     Date fecha_ingreso_bd;
     LocalTime hora_ingreso_bd;
     
-    Jpiso_uno Opisouno = new Jpiso_uno();
-    Jpiso_dos Opisodos = new Jpiso_dos();
-    Jpiso_tres Opisotres = new Jpiso_tres();
+    
+    //Jpiso_dos Opisodos = new Jpiso_dos();
+    //Jpiso_tres Opisotres = new Jpiso_tres();
     
     /**
      * Creates new form Jprincipal
@@ -439,20 +439,27 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
 
     private void Ver_piso1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ver_piso1ActionPerformed
         // TODO add your handling code here:
-        Opisouno.setVisible(true);
-        Opisouno.setLocationRelativeTo(null);
+        Jpiso_uno Opisouno;
+        try {
+            Opisouno = new Jpiso_uno(stmt,con);
+            Opisouno.setVisible(true);
+            Opisouno.setLocationRelativeTo(null);
+        } catch (SQLException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_Ver_piso1ActionPerformed
 
     private void Ver_piso2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ver_piso2ActionPerformed
         // TODO add your handling code here:
-        Opisodos.setVisible(true);
-        Opisodos.setLocationRelativeTo(null);
+        //Opisodos.setVisible(true);
+        //Opisodos.setLocationRelativeTo(null);
     }//GEN-LAST:event_Ver_piso2ActionPerformed
 
     private void Ver_piso3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ver_piso3ActionPerformed
         // TODO add your handling code here:
-        Opisotres.setVisible(true);
-        Opisotres.setLocationRelativeTo(null);
+        //Opisotres.setVisible(true);
+        //Opisotres.setLocationRelativeTo(null);
     }//GEN-LAST:event_Ver_piso3ActionPerformed
 
     private void totalCarrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalCarrosActionPerformed
