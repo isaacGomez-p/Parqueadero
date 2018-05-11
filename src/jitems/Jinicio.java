@@ -15,8 +15,13 @@ public class Jinicio extends javax.swing.JFrame {
      * Creates new form Jinicio
      */
     Jacceso obj1 = new Jacceso();
+<<<<<<< Updated upstream
     //Jingreso_de_carros obj2 = new Jingreso_de_carros();
 
+=======
+    J_cobrar obj2 = new J_cobrar();
+    
+>>>>>>> Stashed changes
     public Jinicio() {
         initComponents();
     }
@@ -43,6 +48,11 @@ public class Jinicio extends javax.swing.JFrame {
 
         Bcobrar.setFont(new java.awt.Font("Tunga", 1, 18)); // NOI18N
         Bcobrar.setText("Pagar");
+        Bcobrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BcobrarActionPerformed(evt);
+            }
+        });
 
         Badmin.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
         Badmin.setText("Admin");
@@ -110,6 +120,12 @@ public class Jinicio extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void BcobrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcobrarActionPerformed
+        // TODO add your handling code here:
+        obj2.setVisible(true);
+        obj2.setLocationRelativeTo(null);
+    }//GEN-LAST:event_BcobrarActionPerformed
 
     /**
      * @param args the command line arguments
