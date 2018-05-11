@@ -77,8 +77,12 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
         jMoto = new javax.swing.JButton();
         choice1 = new java.awt.Choice();
         Ver_piso1 = new javax.swing.JButton();
-        Ver_piso2 = new javax.swing.JButton();
-        Ver_piso3 = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         totalCarros = new javax.swing.JMenuItem();
@@ -145,26 +149,26 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
             }
         });
 
-        Ver_piso1.setText("Piso 1");
+        Ver_piso1.setText("Ver pisos");
         Ver_piso1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Ver_piso1ActionPerformed(evt);
             }
         });
 
-        Ver_piso2.setText("Piso 2");
-        Ver_piso2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Ver_piso2ActionPerformed(evt);
-            }
-        });
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        Ver_piso3.setText("Piso 3");
-        Ver_piso3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Ver_piso3ActionPerformed(evt);
-            }
-        });
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setText("INGRESO:");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setText("AGREGAR UN CLIENTE:");
+
+        jLabel5.setText("Nombre:");
+
+        jLabel6.setText("Placa:");
+
+        jLabel7.setText("Cédula:");
 
         jMenu3.setText("Cantidad de Vehiculos");
 
@@ -278,52 +282,82 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(Ver_piso1)
+                        .addGap(116, 116, 116))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(44, 44, 44)
-                        .addComponent(Ver_piso1)
-                        .addGap(57, 57, 57)
-                        .addComponent(Ver_piso2)
-                        .addGap(69, 69, 69)
-                        .addComponent(Ver_piso3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addGap(19, 19, 19)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(nuevo_carro))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jMoto))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(92, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jSalir)
-                .addGap(46, 46, 46))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jMoto, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(nuevo_carro, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addGap(26, 26, 26)))
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jSalir))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(jLabel7))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel6)
+                                .addComponent(jLabel5)))
+                        .addGap(0, 180, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(28, 28, 28)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(nuevo_carro))
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jSalir)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(jMoto))
+                        .addGap(32, 32, 32)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(Ver_piso1)
+                        .addContainerGap(92, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator1)
+                .addGap(32, 32, 32))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel4)
+                .addGap(21, 21, 21)
+                .addComponent(jLabel7)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jMoto))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Ver_piso1)
-                    .addComponent(Ver_piso2)
-                    .addComponent(Ver_piso3))
-                .addGap(34, 34, 34)
-                .addComponent(jSalir)
-                .addGap(28, 28, 28))
+                .addComponent(jLabel5)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -450,18 +484,6 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
         
     }//GEN-LAST:event_Ver_piso1ActionPerformed
 
-    private void Ver_piso2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ver_piso2ActionPerformed
-        // TODO add your handling code here:
-        //Opisodos.setVisible(true);
-        //Opisodos.setLocationRelativeTo(null);
-    }//GEN-LAST:event_Ver_piso2ActionPerformed
-
-    private void Ver_piso3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ver_piso3ActionPerformed
-        // TODO add your handling code here:
-        //Opisotres.setVisible(true);
-        //Opisotres.setLocationRelativeTo(null);
-    }//GEN-LAST:event_Ver_piso3ActionPerformed
-
     private void totalCarrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalCarrosActionPerformed
         // TODO add your handling code here:
         int n;
@@ -559,8 +581,6 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Ver_piso1;
-    private javax.swing.JButton Ver_piso2;
-    private javax.swing.JButton Ver_piso3;
     private javax.swing.JMenuItem cCarro1;
     private javax.swing.JMenuItem cCarro2;
     private javax.swing.JMenuItem cCarro3;
@@ -571,6 +591,11 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -586,6 +611,7 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
     private javax.swing.JPopupMenu jPopupMenu3;
     private javax.swing.JButton jSalir;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton nuevo_carro;
     private javax.swing.JMenuItem tVehiculos1;
     private javax.swing.JMenuItem tVehiculos2;

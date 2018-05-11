@@ -15,13 +15,13 @@ public class Jinicio extends javax.swing.JFrame {
      * Creates new form Jinicio
      */
     Jacceso obj1 = new Jacceso();
-<<<<<<< Updated upstream
+
     //Jingreso_de_carros obj2 = new Jingreso_de_carros();
 
-=======
+
     J_cobrar obj2 = new J_cobrar();
     
->>>>>>> Stashed changes
+
     public Jinicio() {
         initComponents();
     }

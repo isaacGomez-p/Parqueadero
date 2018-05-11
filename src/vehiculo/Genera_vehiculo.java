@@ -44,18 +44,37 @@ public void genera_hora(){
     int hora = ahora.getHour();
     int seg = ahora.getSecond();
     int min = ahora.getMinute();
-    if(min<10){
-    ho = hora+":0"+min+":"+seg;
-    System.out.println("la hora es: "+hora+": 0"+min+":"+seg);}
+    if(hora<10){
+        ho = "0"+hora+":"+min+":"+seg;
+        System.out.println("la hora es: "+ho);
+    }
+    else if(min<10){
+        ho = hora+":0"+min+":"+seg;
+        System.out.println("la hora es: "+ho);
+    }
+    else if(hora<10 && min<10){
+        ho = "0"+hora+":0"+min+":"+seg;
+        System.out.println("la hora es: "+ho);
+    }
+    else if(min<10 && hora >10){
+        ho = hora+":0"+min+":"+seg;
+        System.out.println("la hora es: "+ho);}
+    else if(min>10 && hora>10){
+       ho = hora+":"+min+":"+seg; 
+       System.out.println("la hora es: "+ho);
+    }
     else if(seg<10&&min<10){
         ho= hora+":0"+min+":0"+seg;
+        System.out.println("la hora es: "+ho);
     }
     else if(seg<10){
         ho = hora+":"+min+":0"+seg;
+        System.out.println("la hora es: "+ho);
     }
     else {
-    ho = hora+":"+min+":"+seg;
-    System.out.println("la hora es: "+hora+":"+min+":"+seg);}
+        ho = hora+":"+min+":"+seg;
+        System.out.println("la hora es: "+ho);
+    }
     
     int year = ahora.getYear();
     Month mes = ahora.getMonth();

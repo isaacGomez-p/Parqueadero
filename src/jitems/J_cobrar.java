@@ -101,6 +101,19 @@ public class J_cobrar extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
+    public void borraBD(){
+        String pl = Tplaca.getText();
+        String qry = "DELETE FROM vehiculo_ingreso WHERE placa = '"+pl+"';";
+        try{
+            stmt.executeUpdate(qry);
+            JOptionPane.showMessageDialog(this,"Datos borrados de la base de datos.","Correcto",JOptionPane.NO_OPTION);
+        }catch(SQLDataException e){
+            System.out.printf("Error al borrar");
+        } catch (SQLException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
     public void insertaBD_2(){
         String qry ="INSERT INTO vehiculo_salida (placa,ubicacion,hora_salida,fecha_salida)VALUES ('"+row.getPlaca()+"','"+this.ubc+"','"+obj4.get_hora()+"','"+row.getFecha_ac()+"')";
         try{
@@ -182,6 +195,7 @@ public class J_cobrar extends javax.swing.JFrame {
         LocalDateTime ahora = LocalDateTime.now();
         System.out.println("Son las: "+ahora.getHour()+":"+ahora.getMinute()+":"+ahora.getSecond());
         String actual = obj4.get_hora();
+        System.out.println("PASA ACTUAL:"+actual);
         hora_a = Time.valueOf(actual);
         JOptionPane.showMessageDialog(this,"Son las: "+hora_a,"HORA",JOptionPane.OK_OPTION);
         hora_a_a = LocalTime.parse(actual);
@@ -191,7 +205,7 @@ public class J_cobrar extends javax.swing.JFrame {
         hora_e_e = LocalTime.parse(lc);
         
         System.out.println("Estuvo "+(hora_a_a.toSecondOfDay()-hora_e_e.toSecondOfDay())+"segundos");
-        System.out.println("Le cuesta: "+(hora_a_a.toSecondOfDay()-hora_e_e.toSecondOfDay())*100);
+        System.out.println("Le cuesta: "+(hora_a_a.toSecondOfDay()-hora_e_e.toSecondOfDay())*6);
         Integer valor, tiempo;
         tiempo = hora_a_a.toSecondOfDay()-hora_e_e.toSecondOfDay();
         valor = (hora_a_a.toSecondOfDay()-hora_e_e.toSecondOfDay())*100;
@@ -204,6 +218,7 @@ public class J_cobrar extends javax.swing.JFrame {
         row = new Cobrar_tabla(a,tiempo,valor,fecha);        
         this.insertaBD();
         this.insertaBD_2();
+        this.borraBD();
     }//GEN-LAST:event_BsearchActionPerformed
 
     /**
