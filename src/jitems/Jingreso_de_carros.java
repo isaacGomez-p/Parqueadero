@@ -455,20 +455,64 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
     }//GEN-LAST:event_jPlacaKeyPressed
 
     private void totalMotosActionPerformed(java.awt.event.ActionEvent evt) {                                           
-
-    
-
         // TODO add your handling code here:
-        int n;
-        n = obj1.cantidad_motos();
-        JOptionPane.showMessageDialog(this, "Hay "+ n + " moto(s) en este momento.","", JOptionPane.PLAIN_MESSAGE);
+        
+        
+        
+        String contar = "SELECT COUNT (*)FROM vehiculo_ingreso WHERE ubicacion <> 'A1' AND ubicacion <> 'A2' AND ubicacion <> 'A3' AND ubicacion <> 'A4' AND ubicacion <> 'A5' AND ubicacion <> 'A6' AND ubicacion <> 'A7' AND ubicacion <> 'A8' AND ubicacion <> 'A9' AND ubicacion <> 'A10' "
+                + "AND ubicacion <> 'A11' AND ubicacion <> 'A12' AND ubicacion <> 'A13' AND ubicacion <> 'A14' AND ubicacion <> 'A15' AND ubicacion <> 'A16' AND ubicacion <> 'A17' AND ubicacion <> 'A18' AND ubicacion <> 'A19' AND ubicacion <> 'A20' "
+                + "AND ubicacion <> 'A21' AND ubicacion <> 'A22' AND ubicacion <> 'A23' AND ubicacion <> 'A24' AND ubicacion <> 'A25' AND ubicacion <> 'A26' AND ubicacion <> 'A27' AND ubicacion <> 'A28' AND ubicacion <> 'A29' AND ubicacion <> 'A30' "
+                + "AND ubicacion <> 'A31' AND ubicacion <> 'A32' AND ubicacion <> 'A33' AND ubicacion <> 'A34' AND ubicacion <> 'A35' AND ubicacion <> 'A36' AND ubicacion <> 'A37' AND ubicacion <> 'A38' AND ubicacion <> 'A39' AND ubicacion <> 'A40' "
+                
+                + "AND ubicacion <> 'B1' AND ubicacion <> 'B2' AND ubicacion <> 'B3' AND ubicacion <> 'B4' AND ubicacion <> 'B5' AND ubicacion <> 'B6' AND ubicacion <> 'B7' AND ubicacion <> 'B8' AND ubicacion <> 'B9' AND ubicacion <> 'B10' "
+                + "AND ubicacion <> 'B11' AND ubicacion <> 'B12' AND ubicacion <> 'B13' AND ubicacion <> 'B14' AND ubicacion <> 'B15' AND ubicacion <> 'B16' AND ubicacion <> 'B17' AND ubicacion <> 'B18' AND ubicacion <> 'B19' AND ubicacion <> 'B20' "
+                + "AND ubicacion <> 'B21' AND ubicacion <> 'B22' AND ubicacion <> 'B23' AND ubicacion <> 'B24' AND ubicacion <> 'B25' AND ubicacion <> 'B26' AND ubicacion <> 'B27' AND ubicacion <> 'B28' AND ubicacion <> 'B29' AND ubicacion <> 'B30' "
+                + "AND ubicacion <> 'B31' AND ubicacion <> 'B32' AND ubicacion <> 'B33' AND ubicacion <> 'B34' AND ubicacion <> 'B35' AND ubicacion <> 'B36' AND ubicacion <> 'B37' AND ubicacion <> 'B38' AND ubicacion <> 'B39' AND ubicacion <> 'B40' "
+                
+                + "AND ubicacion <> 'C1' AND ubicacion <> 'C2' AND ubicacion <> 'C3' AND ubicacion <> 'C4' AND ubicacion <> 'C5' AND ubicacion <> 'C6' AND ubicacion <> 'C7' AND ubicacion <> 'C8' AND ubicacion <> 'C9' AND ubicacion <> 'C10' "
+                + "AND ubicacion <> 'C11' AND ubicacion <> 'C12' AND ubicacion <> 'C13' AND ubicacion <> 'C14' AND ubicacion <> 'C15' AND ubicacion <> 'C16' AND ubicacion <> 'C17' AND ubicacion <> 'C18' AND ubicacion <> 'C19' AND ubicacion <> 'C20' "
+                + "AND ubicacion <> 'C21' AND ubicacion <> 'C22' AND ubicacion <> 'C23' AND ubicacion <> 'C24' AND ubicacion <> 'C25' AND ubicacion <> 'C26' AND ubicacion <> 'C27' AND ubicacion <> 'C28' AND ubicacion <> 'C29' AND ubicacion <> 'C30' "
+                + "AND ubicacion <> 'C31' AND ubicacion <> 'C32' AND ubicacion <> 'C33' AND ubicacion <> 'C34' AND ubicacion <> 'C35' AND ubicacion <> 'C36' AND ubicacion <> 'C37' AND ubicacion <> 'C38' AND ubicacion <> 'C39' AND ubicacion <> 'C40' ";
+                
+        try {
+            
+            ResultSet r = stmt.executeQuery(contar);
+            r.first();
+            JOptionPane.showMessageDialog(this, "Hay "+ r.getString(1) + " moto(s) en este momento.","", JOptionPane.INFORMATION_MESSAGE);
+        } catch (SQLException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }                                          
 
     private void cCarro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCarro1ActionPerformed
         // TODO add your handling code here:
-        int c1;
-        c1 = obj2.get_cCant1();
-        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.PLAIN_MESSAGE);
+        
+        String contar = "SELECT COUNT (*)FROM vehiculo_ingreso WHERE "
+                
+                + " ubicacion <> 'A41' AND ubicacion <> 'A42' AND ubicacion <> 'A43' AND ubicacion <> 'A44' AND ubicacion <> 'A45' AND ubicacion <> 'A46' AND ubicacion <> 'A47' AND ubicacion <> 'A48' AND ubicacion <> 'A49' AND ubicacion <> 'A50' "
+                
+                + "AND ubicacion <> 'B1' AND ubicacion <> 'B2' AND ubicacion <> 'B3' AND ubicacion <> 'B4' AND ubicacion <> 'B5' AND ubicacion <> 'B6' AND ubicacion <> 'B7' AND ubicacion <> 'B8' AND ubicacion <> 'B9' AND ubicacion <> 'B10' "
+                + "AND ubicacion <> 'B11' AND ubicacion <> 'B12' AND ubicacion <> 'B13' AND ubicacion <> 'B14' AND ubicacion <> 'B15' AND ubicacion <> 'B16' AND ubicacion <> 'B17' AND ubicacion <> 'B18' AND ubicacion <> 'B19' AND ubicacion <> 'B20' "
+                + "AND ubicacion <> 'B21' AND ubicacion <> 'B22' AND ubicacion <> 'B23' AND ubicacion <> 'B24' AND ubicacion <> 'B25' AND ubicacion <> 'B26' AND ubicacion <> 'B27' AND ubicacion <> 'B28' AND ubicacion <> 'B29' AND ubicacion <> 'B30' "
+                + "AND ubicacion <> 'B31' AND ubicacion <> 'B32' AND ubicacion <> 'B33' AND ubicacion <> 'B34' AND ubicacion <> 'B35' AND ubicacion <> 'B36' AND ubicacion <> 'B37' AND ubicacion <> 'B38' AND ubicacion <> 'B39' AND ubicacion <> 'B40' "
+                + "AND ubicacion <> 'B41' AND ubicacion <> 'B42' AND ubicacion <> 'B43' AND ubicacion <> 'B44' AND ubicacion <> 'B45' AND ubicacion <> 'B46' AND ubicacion <> 'B47' AND ubicacion <> 'B48' AND ubicacion <> 'B49' AND ubicacion <> 'B50' "
+                
+                + "AND ubicacion <> 'C1' AND ubicacion <> 'C2' AND ubicacion <> 'C3' AND ubicacion <> 'C4' AND ubicacion <> 'C5' AND ubicacion <> 'C6' AND ubicacion <> 'C7' AND ubicacion <> 'C8' AND ubicacion <> 'C9' AND ubicacion <> 'C10' "
+                + "AND ubicacion <> 'C11' AND ubicacion <> 'C12' AND ubicacion <> 'C13' AND ubicacion <> 'C14' AND ubicacion <> 'C15' AND ubicacion <> 'C16' AND ubicacion <> 'C17' AND ubicacion <> 'C18' AND ubicacion <> 'C19' AND ubicacion <> 'C20' "
+                + "AND ubicacion <> 'C21' AND ubicacion <> 'C22' AND ubicacion <> 'C23' AND ubicacion <> 'C24' AND ubicacion <> 'C25' AND ubicacion <> 'C26' AND ubicacion <> 'C27' AND ubicacion <> 'C28' AND ubicacion <> 'C29' AND ubicacion <> 'C30' "
+                + "AND ubicacion <> 'C31' AND ubicacion <> 'C32' AND ubicacion <> 'C33' AND ubicacion <> 'C34' AND ubicacion <> 'C35' AND ubicacion <> 'C36' AND ubicacion <> 'C37' AND ubicacion <> 'C38' AND ubicacion <> 'C39' AND ubicacion <> 'C40' "
+                + "AND ubicacion <> 'C41' AND ubicacion <> 'C42' AND ubicacion <> 'C43' AND ubicacion <> 'C44' AND ubicacion <> 'C45' AND ubicacion <> 'C46' AND ubicacion <> 'C47' AND ubicacion <> 'C48' AND ubicacion <> 'C49' AND ubicacion <> 'C50' ";
+                
+        try {
+            
+            ResultSet r = stmt.executeQuery(contar);
+            r.first();
+            JOptionPane.showMessageDialog(this, "Hay "+ r.getString(1) + " carro(s) en este momento.","", JOptionPane.INFORMATION_MESSAGE);
+        } catch (SQLException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_cCarro1ActionPerformed
 
     private void Ver_piso1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ver_piso1ActionPerformed
@@ -486,65 +530,263 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
 
     private void totalCarrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalCarrosActionPerformed
         // TODO add your handling code here:
-        int n;
-        n = obj1.cantidad_carros();
-        JOptionPane.showMessageDialog(this, "Hay "+ n + " carro(s) en este momento.","", JOptionPane.INFORMATION_MESSAGE);
+        
+        String contar = "SELECT COUNT (*)FROM vehiculo_ingreso WHERE ubicacion <> 'A41' AND ubicacion <> 'A42' AND ubicacion <> 'A43' AND ubicacion <> 'A44' AND ubicacion <> 'A45' AND ubicacion <> 'A46' AND ubicacion <> 'A47' AND ubicacion <> 'A48' AND ubicacion <> 'A49' AND ubicacion <> 'A50' "
+                + "AND ubicacion <> 'B41' AND ubicacion <> 'B42' AND ubicacion <> 'B43' AND ubicacion <> 'B44' AND ubicacion <> 'B45' AND ubicacion <> 'B46' AND ubicacion <> 'B47' AND ubicacion <> 'B48' AND ubicacion <> 'B49' AND ubicacion <> 'B50' "
+                + "AND ubicacion <> 'C41' AND ubicacion <> 'C42' AND ubicacion <> 'C43' AND ubicacion <> 'C44' AND ubicacion <> 'C45' AND ubicacion <> 'C46' AND ubicacion <> 'C47' AND ubicacion <> 'C48' AND ubicacion <> 'C49' AND ubicacion <> 'C50'";
+                
+        try {
+            
+            ResultSet r = stmt.executeQuery(contar);
+            r.first();
+            
+            JOptionPane.showMessageDialog(this, "Hay "+ r.getString(1) + " carro(s) en este momento.","", JOptionPane.INFORMATION_MESSAGE);
+        } catch (SQLException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_totalCarrosActionPerformed
 
     private void tVehiculos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tVehiculos1ActionPerformed
         // TODO add your handling code here:
-        int c1;
-        c1 = obj2.get_cant1();
-        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.INFORMATION_MESSAGE);
+        
+        String contar = "SELECT COUNT (*)FROM vehiculo_ingreso WHERE "
+                
+                
+                + "ubicacion <> 'B1' AND ubicacion <> 'B2' AND ubicacion <> 'B3' AND ubicacion <> 'B4' AND ubicacion <> 'B5' AND ubicacion <> 'B6' AND ubicacion <> 'B7' AND ubicacion <> 'B8' AND ubicacion <> 'B9' AND ubicacion <> 'B10' "
+                + "AND ubicacion <> 'B11' AND ubicacion <> 'B12' AND ubicacion <> 'B13' AND ubicacion <> 'B14' AND ubicacion <> 'B15' AND ubicacion <> 'B16' AND ubicacion <> 'B17' AND ubicacion <> 'B18' AND ubicacion <> 'B19' AND ubicacion <> 'B20' "
+                + "AND ubicacion <> 'B21' AND ubicacion <> 'B22' AND ubicacion <> 'B23' AND ubicacion <> 'B24' AND ubicacion <> 'B25' AND ubicacion <> 'B26' AND ubicacion <> 'B27' AND ubicacion <> 'B28' AND ubicacion <> 'B29' AND ubicacion <> 'B30' "
+                + "AND ubicacion <> 'B31' AND ubicacion <> 'B32' AND ubicacion <> 'B33' AND ubicacion <> 'B34' AND ubicacion <> 'B35' AND ubicacion <> 'B36' AND ubicacion <> 'B37' AND ubicacion <> 'B38' AND ubicacion <> 'B39' AND ubicacion <> 'B40' "
+                + "AND ubicacion <> 'B41' AND ubicacion <> 'B42' AND ubicacion <> 'B43' AND ubicacion <> 'B44' AND ubicacion <> 'B45' AND ubicacion <> 'B46' AND ubicacion <> 'B47' AND ubicacion <> 'B48' AND ubicacion <> 'B49' AND ubicacion <> 'B50' "
+                
+                + "AND ubicacion <> 'C1' AND ubicacion <> 'C2' AND ubicacion <> 'C3' AND ubicacion <> 'C4' AND ubicacion <> 'C5' AND ubicacion <> 'C6' AND ubicacion <> 'C7' AND ubicacion <> 'C8' AND ubicacion <> 'C9' AND ubicacion <> 'C10' "
+                + "AND ubicacion <> 'C11' AND ubicacion <> 'C12' AND ubicacion <> 'C13' AND ubicacion <> 'C14' AND ubicacion <> 'C15' AND ubicacion <> 'C16' AND ubicacion <> 'C17' AND ubicacion <> 'C18' AND ubicacion <> 'C19' AND ubicacion <> 'C20' "
+                + "AND ubicacion <> 'C21' AND ubicacion <> 'C22' AND ubicacion <> 'C23' AND ubicacion <> 'C24' AND ubicacion <> 'C25' AND ubicacion <> 'C26' AND ubicacion <> 'C27' AND ubicacion <> 'C28' AND ubicacion <> 'C29' AND ubicacion <> 'C30' "
+                + "AND ubicacion <> 'C31' AND ubicacion <> 'C32' AND ubicacion <> 'C33' AND ubicacion <> 'C34' AND ubicacion <> 'C35' AND ubicacion <> 'C36' AND ubicacion <> 'C37' AND ubicacion <> 'C38' AND ubicacion <> 'C39' AND ubicacion <> 'C40' "
+                + "AND ubicacion <> 'C41' AND ubicacion <> 'C42' AND ubicacion <> 'C43' AND ubicacion <> 'C44' AND ubicacion <> 'C45' AND ubicacion <> 'C46' AND ubicacion <> 'C47' AND ubicacion <> 'C48' AND ubicacion <> 'C49' AND ubicacion <> 'C50' ";
+                
+        try {
+            
+            ResultSet r = stmt.executeQuery(contar);
+            r.first();
+            if(r.getString(1).equals(0)){
+                JOptionPane.showMessageDialog(this, "Hay 0 vehiculo(s) en este momento.","", JOptionPane.INFORMATION_MESSAGE);
+            }else{
+                JOptionPane.showMessageDialog(this, "Hay "+ r.getString(1) + " vehiculo(s) en este momento.","", JOptionPane.INFORMATION_MESSAGE);
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
     }//GEN-LAST:event_tVehiculos1ActionPerformed
 
     private void tVehiculos2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tVehiculos2ActionPerformed
         // TODO add your handling code here:
-        int c2;
-        c2 = obj2.get_cant2();
-        JOptionPane.showMessageDialog(this, "Hay "+ c2 + " vehiculos en este momento.","PISO 2", JOptionPane.INFORMATION_MESSAGE);
+        
+        String contar = "SELECT COUNT (*)FROM vehiculo_ingreso WHERE ubicacion <> 'A1' AND ubicacion <> 'A2' AND ubicacion <> 'A3' AND ubicacion <> 'A4' AND ubicacion <> 'A5' AND ubicacion <> 'A6' AND ubicacion <> 'A7' AND ubicacion <> 'A8' AND ubicacion <> 'A9' AND ubicacion <> 'A10' "
+                + "AND ubicacion <> 'A11' AND ubicacion <> 'A12' AND ubicacion <> 'A13' AND ubicacion <> 'A14' AND ubicacion <> 'A15' AND ubicacion <> 'A16' AND ubicacion <> 'A17' AND ubicacion <> 'A18' AND ubicacion <> 'A19' AND ubicacion <> 'A20' "
+                + "AND ubicacion <> 'A21' AND ubicacion <> 'A22' AND ubicacion <> 'A23' AND ubicacion <> 'A24' AND ubicacion <> 'A25' AND ubicacion <> 'A26' AND ubicacion <> 'A27' AND ubicacion <> 'A28' AND ubicacion <> 'A29' AND ubicacion <> 'A30' "
+                + "AND ubicacion <> 'A31' AND ubicacion <> 'A32' AND ubicacion <> 'A33' AND ubicacion <> 'A34' AND ubicacion <> 'A35' AND ubicacion <> 'A36' AND ubicacion <> 'A37' AND ubicacion <> 'A38' AND ubicacion <> 'A39' AND ubicacion <> 'A40' "
+                + "AND ubicacion <> 'A41' AND ubicacion <> 'A42' AND ubicacion <> 'A43' AND ubicacion <> 'A44' AND ubicacion <> 'A45' AND ubicacion <> 'A46' AND ubicacion <> 'A47' AND ubicacion <> 'A48' AND ubicacion <> 'A49' AND ubicacion <> 'A50' "
+                
+                + "AND ubicacion <> 'C1' AND ubicacion <> 'C2' AND ubicacion <> 'C3' AND ubicacion <> 'C4' AND ubicacion <> 'C5' AND ubicacion <> 'C6' AND ubicacion <> 'C7' AND ubicacion <> 'C8' AND ubicacion <> 'C9' AND ubicacion <> 'C10' "
+                + "AND ubicacion <> 'C11' AND ubicacion <> 'C12' AND ubicacion <> 'C13' AND ubicacion <> 'C14' AND ubicacion <> 'C15' AND ubicacion <> 'C16' AND ubicacion <> 'C17' AND ubicacion <> 'C18' AND ubicacion <> 'C19' AND ubicacion <> 'C20' "
+                + "AND ubicacion <> 'C21' AND ubicacion <> 'C22' AND ubicacion <> 'C23' AND ubicacion <> 'C24' AND ubicacion <> 'C25' AND ubicacion <> 'C26' AND ubicacion <> 'C27' AND ubicacion <> 'C28' AND ubicacion <> 'C29' AND ubicacion <> 'C30' "
+                + "AND ubicacion <> 'C31' AND ubicacion <> 'C32' AND ubicacion <> 'C33' AND ubicacion <> 'C34' AND ubicacion <> 'C35' AND ubicacion <> 'C36' AND ubicacion <> 'C37' AND ubicacion <> 'C38' AND ubicacion <> 'C39' AND ubicacion <> 'C40' "
+                + "AND ubicacion <> 'C41' AND ubicacion <> 'C42' AND ubicacion <> 'C43' AND ubicacion <> 'C44' AND ubicacion <> 'C45' AND ubicacion <> 'C46' AND ubicacion <> 'C47' AND ubicacion <> 'C48' AND ubicacion <> 'C49' AND ubicacion <> 'C50' ";
+                
+        try {
+            
+            ResultSet r = stmt.executeQuery(contar);
+            r.first();
+            JOptionPane.showMessageDialog(this, "Hay "+ r.getString(1) + " vehiculo(s) en este momento.","", JOptionPane.INFORMATION_MESSAGE);
+        } catch (SQLException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_tVehiculos2ActionPerformed
 
     private void tVehiculos3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tVehiculos3ActionPerformed
         // TODO add your handling code here:
-        int c3;
-        c3 = obj2.get_cant3();
-        JOptionPane.showMessageDialog(this, "Hay "+ c3 + " vehiculos en este momento.","PISO 3", JOptionPane.INFORMATION_MESSAGE);
+        
+        String contar = "SELECT COUNT (*)FROM vehiculo_ingreso WHERE ubicacion <> 'A1' AND ubicacion <> 'A2' AND ubicacion <> 'A3' AND ubicacion <> 'A4' AND ubicacion <> 'A5' AND ubicacion <> 'A6' AND ubicacion <> 'A7' AND ubicacion <> 'A8' AND ubicacion <> 'A9' AND ubicacion <> 'A10' "
+                + "AND ubicacion <> 'A11' AND ubicacion <> 'A12' AND ubicacion <> 'A13' AND ubicacion <> 'A14' AND ubicacion <> 'A15' AND ubicacion <> 'A16' AND ubicacion <> 'A17' AND ubicacion <> 'A18' AND ubicacion <> 'A19' AND ubicacion <> 'A20' "
+                + "AND ubicacion <> 'A21' AND ubicacion <> 'A22' AND ubicacion <> 'A23' AND ubicacion <> 'A24' AND ubicacion <> 'A25' AND ubicacion <> 'A26' AND ubicacion <> 'A27' AND ubicacion <> 'A28' AND ubicacion <> 'A29' AND ubicacion <> 'A30' "
+                + "AND ubicacion <> 'A31' AND ubicacion <> 'A32' AND ubicacion <> 'A33' AND ubicacion <> 'A34' AND ubicacion <> 'A35' AND ubicacion <> 'A36' AND ubicacion <> 'A37' AND ubicacion <> 'A38' AND ubicacion <> 'A39' AND ubicacion <> 'A40' "
+                + "AND ubicacion <> 'A41' AND ubicacion <> 'A42' AND ubicacion <> 'A43' AND ubicacion <> 'A44' AND ubicacion <> 'A45' AND ubicacion <> 'A46' AND ubicacion <> 'A47' AND ubicacion <> 'A48' AND ubicacion <> 'A49' AND ubicacion <> 'A50' "
+                
+                + "AND ubicacion <> 'B1' AND ubicacion <> 'B2' AND ubicacion <> 'B3' AND ubicacion <> 'B4' AND ubicacion <> 'B5' AND ubicacion <> 'B6' AND ubicacion <> 'B7' AND ubicacion <> 'B8' AND ubicacion <> 'B9' AND ubicacion <> 'B10' "
+                + "AND ubicacion <> 'B11' AND ubicacion <> 'B12' AND ubicacion <> 'B13' AND ubicacion <> 'B14' AND ubicacion <> 'B15' AND ubicacion <> 'B16' AND ubicacion <> 'B17' AND ubicacion <> 'B18' AND ubicacion <> 'B19' AND ubicacion <> 'B20' "
+                + "AND ubicacion <> 'B21' AND ubicacion <> 'B22' AND ubicacion <> 'B23' AND ubicacion <> 'B24' AND ubicacion <> 'B25' AND ubicacion <> 'B26' AND ubicacion <> 'B27' AND ubicacion <> 'B28' AND ubicacion <> 'B29' AND ubicacion <> 'B30' "
+                + "AND ubicacion <> 'B31' AND ubicacion <> 'B32' AND ubicacion <> 'B33' AND ubicacion <> 'B34' AND ubicacion <> 'B35' AND ubicacion <> 'B36' AND ubicacion <> 'B37' AND ubicacion <> 'B38' AND ubicacion <> 'B39' AND ubicacion <> 'B40' "
+                + "AND ubicacion <> 'B41' AND ubicacion <> 'B42' AND ubicacion <> 'B43' AND ubicacion <> 'B44' AND ubicacion <> 'B45' AND ubicacion <> 'B46' AND ubicacion <> 'B47' AND ubicacion <> 'B48' AND ubicacion <> 'B49' AND ubicacion <> 'B50' "
+                ;
+                
+        try {
+            
+            ResultSet r = stmt.executeQuery(contar);
+            r.first();
+            JOptionPane.showMessageDialog(this, "Hay "+ r.getString(1) + " vehiculo(s) en este momento.","", JOptionPane.INFORMATION_MESSAGE);
+        } catch (SQLException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
     }//GEN-LAST:event_tVehiculos3ActionPerformed
 
     private void cCarro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCarro2ActionPerformed
         // TODO add your handling code here:
-        int c1;
-        c1 = obj2.get_cCant2();
-        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.INFORMATION_MESSAGE);
+        
+        String contar = "SELECT COUNT (*)FROM vehiculo_ingreso WHERE ubicacion <> 'A1' AND ubicacion <> 'A2' AND ubicacion <> 'A3' AND ubicacion <> 'A4' AND ubicacion <> 'A5' AND ubicacion <> 'A6' AND ubicacion <> 'A7' AND ubicacion <> 'A8' AND ubicacion <> 'A9' AND ubicacion <> 'A10' "
+                + "AND ubicacion <> 'A11' AND ubicacion <> 'A12' AND ubicacion <> 'A13' AND ubicacion <> 'A14' AND ubicacion <> 'A15' AND ubicacion <> 'A16' AND ubicacion <> 'A17' AND ubicacion <> 'A18' AND ubicacion <> 'A19' AND ubicacion <> 'A20' "
+                + "AND ubicacion <> 'A21' AND ubicacion <> 'A22' AND ubicacion <> 'A23' AND ubicacion <> 'A24' AND ubicacion <> 'A25' AND ubicacion <> 'A26' AND ubicacion <> 'A27' AND ubicacion <> 'A28' AND ubicacion <> 'A29' AND ubicacion <> 'A30' "
+                + "AND ubicacion <> 'A31' AND ubicacion <> 'A32' AND ubicacion <> 'A33' AND ubicacion <> 'A34' AND ubicacion <> 'A35' AND ubicacion <> 'A36' AND ubicacion <> 'A37' AND ubicacion <> 'A38' AND ubicacion <> 'A39' AND ubicacion <> 'A40' "
+                + "AND ubicacion <> 'A41' AND ubicacion <> 'A42' AND ubicacion <> 'A43' AND ubicacion <> 'A44' AND ubicacion <> 'A45' AND ubicacion <> 'A46' AND ubicacion <> 'A47' AND ubicacion <> 'A48' AND ubicacion <> 'A49' AND ubicacion <> 'A50' "
+                
+                + "AND ubicacion <> 'B41' AND ubicacion <> 'B42' AND ubicacion <> 'B43' AND ubicacion <> 'B44' AND ubicacion <> 'B45' AND ubicacion <> 'B46' AND ubicacion <> 'B47' AND ubicacion <> 'B48' AND ubicacion <> 'B49' AND ubicacion <> 'B50' "
+                
+                + "AND ubicacion <> 'C1' AND ubicacion <> 'C2' AND ubicacion <> 'C3' AND ubicacion <> 'C4' AND ubicacion <> 'C5' AND ubicacion <> 'C6' AND ubicacion <> 'C7' AND ubicacion <> 'C8' AND ubicacion <> 'C9' AND ubicacion <> 'C10' "
+                + "AND ubicacion <> 'C11' AND ubicacion <> 'C12' AND ubicacion <> 'C13' AND ubicacion <> 'C14' AND ubicacion <> 'C15' AND ubicacion <> 'C16' AND ubicacion <> 'C17' AND ubicacion <> 'C18' AND ubicacion <> 'C19' AND ubicacion <> 'C20' "
+                + "AND ubicacion <> 'C21' AND ubicacion <> 'C22' AND ubicacion <> 'C23' AND ubicacion <> 'C24' AND ubicacion <> 'C25' AND ubicacion <> 'C26' AND ubicacion <> 'C27' AND ubicacion <> 'C28' AND ubicacion <> 'C29' AND ubicacion <> 'C30' "
+                + "AND ubicacion <> 'C31' AND ubicacion <> 'C32' AND ubicacion <> 'C33' AND ubicacion <> 'C34' AND ubicacion <> 'C35' AND ubicacion <> 'C36' AND ubicacion <> 'C37' AND ubicacion <> 'C38' AND ubicacion <> 'C39' AND ubicacion <> 'C40' "
+                + "AND ubicacion <> 'C41' AND ubicacion <> 'C42' AND ubicacion <> 'C43' AND ubicacion <> 'C44' AND ubicacion <> 'C45' AND ubicacion <> 'C46' AND ubicacion <> 'C47' AND ubicacion <> 'C48' AND ubicacion <> 'C49' AND ubicacion <> 'C50' ";
+                
+        try {
+            
+            ResultSet r = stmt.executeQuery(contar);
+            r.first();
+            JOptionPane.showMessageDialog(this, "Hay "+ r.getString(1) + " carro(s) en este momento.","", JOptionPane.INFORMATION_MESSAGE);
+        } catch (SQLException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
     }//GEN-LAST:event_cCarro2ActionPerformed
 
     private void cCarro3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cCarro3ActionPerformed
         // TODO add your handling code here:
-        int c1;
-        c1 = obj2.get_cCant3();
-        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.INFORMATION_MESSAGE);
+        
+        String contar = "SELECT COUNT (*)FROM vehiculo_ingreso WHERE ubicacion <> 'A1' AND ubicacion <> 'A2' AND ubicacion <> 'A3' AND ubicacion <> 'A4' AND ubicacion <> 'A5' AND ubicacion <> 'A6' AND ubicacion <> 'A7' AND ubicacion <> 'A8' AND ubicacion <> 'A9' AND ubicacion <> 'A10' "
+                + "AND ubicacion <> 'A11' AND ubicacion <> 'A12' AND ubicacion <> 'A13' AND ubicacion <> 'A14' AND ubicacion <> 'A15' AND ubicacion <> 'A16' AND ubicacion <> 'A17' AND ubicacion <> 'A18' AND ubicacion <> 'A19' AND ubicacion <> 'A20' "
+                + "AND ubicacion <> 'A21' AND ubicacion <> 'A22' AND ubicacion <> 'A23' AND ubicacion <> 'A24' AND ubicacion <> 'A25' AND ubicacion <> 'A26' AND ubicacion <> 'A27' AND ubicacion <> 'A28' AND ubicacion <> 'A29' AND ubicacion <> 'A30' "
+                + "AND ubicacion <> 'A31' AND ubicacion <> 'A32' AND ubicacion <> 'A33' AND ubicacion <> 'A34' AND ubicacion <> 'A35' AND ubicacion <> 'A36' AND ubicacion <> 'A37' AND ubicacion <> 'A38' AND ubicacion <> 'A39' AND ubicacion <> 'A40' "
+                + "AND ubicacion <> 'A41' AND ubicacion <> 'A42' AND ubicacion <> 'A43' AND ubicacion <> 'A44' AND ubicacion <> 'A45' AND ubicacion <> 'A46' AND ubicacion <> 'A47' AND ubicacion <> 'A48' AND ubicacion <> 'A49' AND ubicacion <> 'A50' "
+                
+                + "AND ubicacion <> 'B1' AND ubicacion <> 'B2' AND ubicacion <> 'B3' AND ubicacion <> 'B4' AND ubicacion <> 'B5' AND ubicacion <> 'B6' AND ubicacion <> 'B7' AND ubicacion <> 'B8' AND ubicacion <> 'B9' AND ubicacion <> 'B10' "
+                + "AND ubicacion <> 'B11' AND ubicacion <> 'B12' AND ubicacion <> 'B13' AND ubicacion <> 'B14' AND ubicacion <> 'B15' AND ubicacion <> 'B16' AND ubicacion <> 'B17' AND ubicacion <> 'B18' AND ubicacion <> 'B19' AND ubicacion <> 'B20' "
+                + "AND ubicacion <> 'B21' AND ubicacion <> 'B22' AND ubicacion <> 'B23' AND ubicacion <> 'B24' AND ubicacion <> 'B25' AND ubicacion <> 'B26' AND ubicacion <> 'B27' AND ubicacion <> 'B28' AND ubicacion <> 'B29' AND ubicacion <> 'B30' "
+                + "AND ubicacion <> 'B31' AND ubicacion <> 'B32' AND ubicacion <> 'B33' AND ubicacion <> 'B34' AND ubicacion <> 'B35' AND ubicacion <> 'B36' AND ubicacion <> 'B37' AND ubicacion <> 'B38' AND ubicacion <> 'B39' AND ubicacion <> 'B40' "
+                + "AND ubicacion <> 'B41' AND ubicacion <> 'B42' AND ubicacion <> 'B43' AND ubicacion <> 'B44' AND ubicacion <> 'B45' AND ubicacion <> 'B46' AND ubicacion <> 'B47' AND ubicacion <> 'B48' AND ubicacion <> 'B49' AND ubicacion <> 'B50' "
+                
+                + "AND ubicacion <> 'C41' AND ubicacion <> 'C42' AND ubicacion <> 'C43' AND ubicacion <> 'C44' AND ubicacion <> 'C45' AND ubicacion <> 'C46' AND ubicacion <> 'C47' AND ubicacion <> 'C48' AND ubicacion <> 'C49' AND ubicacion <> 'C50' ";
+                
+        try {
+            
+            ResultSet r = stmt.executeQuery(contar);
+            r.first();
+            JOptionPane.showMessageDialog(this, "Hay "+ r.getString(1) + " carro(s) en este momento.","", JOptionPane.INFORMATION_MESSAGE);
+        } catch (SQLException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+               
     }//GEN-LAST:event_cCarro3ActionPerformed
 
     private void cMoto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cMoto1ActionPerformed
         // TODO add your handling code here:
-        int c1;
-        c1 = obj2.get_mCant1();
-        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.INFORMATION_MESSAGE);
+        String contar = "SELECT COUNT (*)FROM vehiculo_ingreso WHERE ubicacion <> 'A1' AND ubicacion <> 'A2' AND ubicacion <> 'A3' AND ubicacion <> 'A4' AND ubicacion <> 'A5' AND ubicacion <> 'A6' AND ubicacion <> 'A7' AND ubicacion <> 'A8' AND ubicacion <> 'A9' AND ubicacion <> 'A10' "
+                + "AND ubicacion <> 'A11' AND ubicacion <> 'A12' AND ubicacion <> 'A13' AND ubicacion <> 'A14' AND ubicacion <> 'A15' AND ubicacion <> 'A16' AND ubicacion <> 'A17' AND ubicacion <> 'A18' AND ubicacion <> 'A19' AND ubicacion <> 'A20' "
+                + "AND ubicacion <> 'A21' AND ubicacion <> 'A22' AND ubicacion <> 'A23' AND ubicacion <> 'A24' AND ubicacion <> 'A25' AND ubicacion <> 'A26' AND ubicacion <> 'A27' AND ubicacion <> 'A28' AND ubicacion <> 'A29' AND ubicacion <> 'A30' "
+                + "AND ubicacion <> 'A31' AND ubicacion <> 'A32' AND ubicacion <> 'A33' AND ubicacion <> 'A34' AND ubicacion <> 'A35' AND ubicacion <> 'A36' AND ubicacion <> 'A37' AND ubicacion <> 'A38' AND ubicacion <> 'A39' AND ubicacion <> 'A40' "
+                
+                
+                + "AND ubicacion <> 'B1' AND ubicacion <> 'B2' AND ubicacion <> 'B3' AND ubicacion <> 'B4' AND ubicacion <> 'B5' AND ubicacion <> 'B6' AND ubicacion <> 'B7' AND ubicacion <> 'B8' AND ubicacion <> 'B9' AND ubicacion <> 'B10' "
+                + "AND ubicacion <> 'B11' AND ubicacion <> 'B12' AND ubicacion <> 'B13' AND ubicacion <> 'B14' AND ubicacion <> 'B15' AND ubicacion <> 'B16' AND ubicacion <> 'B17' AND ubicacion <> 'B18' AND ubicacion <> 'B19' AND ubicacion <> 'B20' "
+                + "AND ubicacion <> 'B21' AND ubicacion <> 'B22' AND ubicacion <> 'B23' AND ubicacion <> 'B24' AND ubicacion <> 'B25' AND ubicacion <> 'B26' AND ubicacion <> 'B27' AND ubicacion <> 'B28' AND ubicacion <> 'B29' AND ubicacion <> 'B30' "
+                + "AND ubicacion <> 'B31' AND ubicacion <> 'B32' AND ubicacion <> 'B33' AND ubicacion <> 'B34' AND ubicacion <> 'B35' AND ubicacion <> 'B36' AND ubicacion <> 'B37' AND ubicacion <> 'B38' AND ubicacion <> 'B39' AND ubicacion <> 'B40' "
+                + "AND ubicacion <> 'B41' AND ubicacion <> 'B42' AND ubicacion <> 'B43' AND ubicacion <> 'B44' AND ubicacion <> 'B45' AND ubicacion <> 'B46' AND ubicacion <> 'B47' AND ubicacion <> 'B48' AND ubicacion <> 'B49' AND ubicacion <> 'B50' "
+                
+                + "AND ubicacion <> 'C1' AND ubicacion <> 'C2' AND ubicacion <> 'C3' AND ubicacion <> 'C4' AND ubicacion <> 'C5' AND ubicacion <> 'C6' AND ubicacion <> 'C7' AND ubicacion <> 'C8' AND ubicacion <> 'C9' AND ubicacion <> 'C10' "
+                + "AND ubicacion <> 'C11' AND ubicacion <> 'C12' AND ubicacion <> 'C13' AND ubicacion <> 'C14' AND ubicacion <> 'C15' AND ubicacion <> 'C16' AND ubicacion <> 'C17' AND ubicacion <> 'C18' AND ubicacion <> 'C19' AND ubicacion <> 'C20' "
+                + "AND ubicacion <> 'C21' AND ubicacion <> 'C22' AND ubicacion <> 'C23' AND ubicacion <> 'C24' AND ubicacion <> 'C25' AND ubicacion <> 'C26' AND ubicacion <> 'C27' AND ubicacion <> 'C28' AND ubicacion <> 'C29' AND ubicacion <> 'C30' "
+                + "AND ubicacion <> 'C31' AND ubicacion <> 'C32' AND ubicacion <> 'C33' AND ubicacion <> 'C34' AND ubicacion <> 'C35' AND ubicacion <> 'C36' AND ubicacion <> 'C37' AND ubicacion <> 'C38' AND ubicacion <> 'C39' AND ubicacion <> 'C40' "
+                + "AND ubicacion <> 'C41' AND ubicacion <> 'C42' AND ubicacion <> 'C43' AND ubicacion <> 'C44' AND ubicacion <> 'C45' AND ubicacion <> 'C46' AND ubicacion <> 'C47' AND ubicacion <> 'C48' AND ubicacion <> 'C49' AND ubicacion <> 'C50' ";
+                
+        try {
+            
+            ResultSet r = stmt.executeQuery(contar);
+            r.first();
+            JOptionPane.showMessageDialog(this, "Hay "+ r.getString(1) + " moto(s) en este momento.","", JOptionPane.INFORMATION_MESSAGE);
+        } catch (SQLException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_cMoto1ActionPerformed
 
     private void cMoto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cMoto2ActionPerformed
         // TODO add your handling code here:
-        int c1;
-        c1 = obj2.get_mCant2();
-        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.INFORMATION_MESSAGE);
+        
+        String contar = "SELECT COUNT (*)FROM vehiculo_ingreso WHERE ubicacion <> 'A1' AND ubicacion <> 'A2' AND ubicacion <> 'A3' AND ubicacion <> 'A4' AND ubicacion <> 'A5' AND ubicacion <> 'A6' AND ubicacion <> 'A7' AND ubicacion <> 'A8' AND ubicacion <> 'A9' AND ubicacion <> 'A10' "
+                + "AND ubicacion <> 'A11' AND ubicacion <> 'A12' AND ubicacion <> 'A13' AND ubicacion <> 'A14' AND ubicacion <> 'A15' AND ubicacion <> 'A16' AND ubicacion <> 'A17' AND ubicacion <> 'A18' AND ubicacion <> 'A19' AND ubicacion <> 'A20' "
+                + "AND ubicacion <> 'A21' AND ubicacion <> 'A22' AND ubicacion <> 'A23' AND ubicacion <> 'A24' AND ubicacion <> 'A25' AND ubicacion <> 'A26' AND ubicacion <> 'A27' AND ubicacion <> 'A28' AND ubicacion <> 'A29' AND ubicacion <> 'A30' "
+                + "AND ubicacion <> 'A31' AND ubicacion <> 'A32' AND ubicacion <> 'A33' AND ubicacion <> 'A34' AND ubicacion <> 'A35' AND ubicacion <> 'A36' AND ubicacion <> 'A37' AND ubicacion <> 'A38' AND ubicacion <> 'A39' AND ubicacion <> 'A40' "
+                + "AND ubicacion <> 'A41' AND ubicacion <> 'A42' AND ubicacion <> 'A43' AND ubicacion <> 'A44' AND ubicacion <> 'A45' AND ubicacion <> 'A46' AND ubicacion <> 'A47' AND ubicacion <> 'A48' AND ubicacion <> 'A49' AND ubicacion <> 'A50' "
+                
+                + "AND ubicacion <> 'B1' AND ubicacion <> 'B2' AND ubicacion <> 'B3' AND ubicacion <> 'B4' AND ubicacion <> 'B5' AND ubicacion <> 'B6' AND ubicacion <> 'B7' AND ubicacion <> 'B8' AND ubicacion <> 'B9' AND ubicacion <> 'B10' "
+                + "AND ubicacion <> 'B11' AND ubicacion <> 'B12' AND ubicacion <> 'B13' AND ubicacion <> 'B14' AND ubicacion <> 'B15' AND ubicacion <> 'B16' AND ubicacion <> 'B17' AND ubicacion <> 'B18' AND ubicacion <> 'B19' AND ubicacion <> 'B20' "
+                + "AND ubicacion <> 'B21' AND ubicacion <> 'B22' AND ubicacion <> 'B23' AND ubicacion <> 'B24' AND ubicacion <> 'B25' AND ubicacion <> 'B26' AND ubicacion <> 'B27' AND ubicacion <> 'B28' AND ubicacion <> 'B29' AND ubicacion <> 'B30' "
+                + "AND ubicacion <> 'B31' AND ubicacion <> 'B32' AND ubicacion <> 'B33' AND ubicacion <> 'B34' AND ubicacion <> 'B35' AND ubicacion <> 'B36' AND ubicacion <> 'B37' AND ubicacion <> 'B38' AND ubicacion <> 'B39' AND ubicacion <> 'B40' "
+                
+                + "AND ubicacion <> 'C1' AND ubicacion <> 'C2' AND ubicacion <> 'C3' AND ubicacion <> 'C4' AND ubicacion <> 'C5' AND ubicacion <> 'C6' AND ubicacion <> 'C7' AND ubicacion <> 'C8' AND ubicacion <> 'C9' AND ubicacion <> 'C10' "
+                + "AND ubicacion <> 'C11' AND ubicacion <> 'C12' AND ubicacion <> 'C13' AND ubicacion <> 'C14' AND ubicacion <> 'C15' AND ubicacion <> 'C16' AND ubicacion <> 'C17' AND ubicacion <> 'C18' AND ubicacion <> 'C19' AND ubicacion <> 'C20' "
+                + "AND ubicacion <> 'C21' AND ubicacion <> 'C22' AND ubicacion <> 'C23' AND ubicacion <> 'C24' AND ubicacion <> 'C25' AND ubicacion <> 'C26' AND ubicacion <> 'C27' AND ubicacion <> 'C28' AND ubicacion <> 'C29' AND ubicacion <> 'C30' "
+                + "AND ubicacion <> 'C31' AND ubicacion <> 'C32' AND ubicacion <> 'C33' AND ubicacion <> 'C34' AND ubicacion <> 'C35' AND ubicacion <> 'C36' AND ubicacion <> 'C37' AND ubicacion <> 'C38' AND ubicacion <> 'C39' AND ubicacion <> 'C40' "
+                + "AND ubicacion <> 'C41' AND ubicacion <> 'C42' AND ubicacion <> 'C43' AND ubicacion <> 'C44' AND ubicacion <> 'C45' AND ubicacion <> 'C46' AND ubicacion <> 'C47' AND ubicacion <> 'C48' AND ubicacion <> 'C49' AND ubicacion <> 'C50' ";
+                
+        try {
+            
+            ResultSet r = stmt.executeQuery(contar);
+            r.first();
+            JOptionPane.showMessageDialog(this, "Hay "+ r.getString(1) + " moto(s) en este momento.","", JOptionPane.INFORMATION_MESSAGE);
+        } catch (SQLException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_cMoto2ActionPerformed
 
     private void cMoto3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cMoto3ActionPerformed
         // TODO add your handling code here:
-        int c1;
-        c1 = obj2.get_mCant3();
-        JOptionPane.showMessageDialog(this, "Hay "+ c1 + " vehiculos en este momento.","PISO 1", JOptionPane.INFORMATION_MESSAGE);
+        
+        String contar = "SELECT COUNT (*)FROM vehiculo_ingreso WHERE ubicacion <> 'A1' AND ubicacion <> 'A2' AND ubicacion <> 'A3' AND ubicacion <> 'A4' AND ubicacion <> 'A5' AND ubicacion <> 'A6' AND ubicacion <> 'A7' AND ubicacion <> 'A8' AND ubicacion <> 'A9' AND ubicacion <> 'A10' "
+                + "AND ubicacion <> 'A11' AND ubicacion <> 'A12' AND ubicacion <> 'A13' AND ubicacion <> 'A14' AND ubicacion <> 'A15' AND ubicacion <> 'A16' AND ubicacion <> 'A17' AND ubicacion <> 'A18' AND ubicacion <> 'A19' AND ubicacion <> 'A20' "
+                + "AND ubicacion <> 'A21' AND ubicacion <> 'A22' AND ubicacion <> 'A23' AND ubicacion <> 'A24' AND ubicacion <> 'A25' AND ubicacion <> 'A26' AND ubicacion <> 'A27' AND ubicacion <> 'A28' AND ubicacion <> 'A29' AND ubicacion <> 'A30' "
+                + "AND ubicacion <> 'A31' AND ubicacion <> 'A32' AND ubicacion <> 'A33' AND ubicacion <> 'A34' AND ubicacion <> 'A35' AND ubicacion <> 'A36' AND ubicacion <> 'A37' AND ubicacion <> 'A38' AND ubicacion <> 'A39' AND ubicacion <> 'A40' "
+                + "AND ubicacion <> 'A41' AND ubicacion <> 'A42' AND ubicacion <> 'A43' AND ubicacion <> 'A44' AND ubicacion <> 'A45' AND ubicacion <> 'A46' AND ubicacion <> 'A47' AND ubicacion <> 'A48' AND ubicacion <> 'A49' AND ubicacion <> 'A50' "
+                
+                + "AND ubicacion <> 'B1' AND ubicacion <> 'B2' AND ubicacion <> 'B3' AND ubicacion <> 'B4' AND ubicacion <> 'B5' AND ubicacion <> 'B6' AND ubicacion <> 'B7' AND ubicacion <> 'B8' AND ubicacion <> 'B9' AND ubicacion <> 'B10' "
+                + "AND ubicacion <> 'B11' AND ubicacion <> 'B12' AND ubicacion <> 'B13' AND ubicacion <> 'B14' AND ubicacion <> 'B15' AND ubicacion <> 'B16' AND ubicacion <> 'B17' AND ubicacion <> 'B18' AND ubicacion <> 'B19' AND ubicacion <> 'B20' "
+                + "AND ubicacion <> 'B21' AND ubicacion <> 'B22' AND ubicacion <> 'B23' AND ubicacion <> 'B24' AND ubicacion <> 'B25' AND ubicacion <> 'B26' AND ubicacion <> 'B27' AND ubicacion <> 'B28' AND ubicacion <> 'B29' AND ubicacion <> 'B30' "
+                + "AND ubicacion <> 'B31' AND ubicacion <> 'B32' AND ubicacion <> 'B33' AND ubicacion <> 'B34' AND ubicacion <> 'B35' AND ubicacion <> 'B36' AND ubicacion <> 'B37' AND ubicacion <> 'B38' AND ubicacion <> 'B39' AND ubicacion <> 'B40' "
+                + "AND ubicacion <> 'B41' AND ubicacion <> 'B42' AND ubicacion <> 'B43' AND ubicacion <> 'B44' AND ubicacion <> 'B45' AND ubicacion <> 'B46' AND ubicacion <> 'B47' AND ubicacion <> 'B48' AND ubicacion <> 'B49' AND ubicacion <> 'B50' "
+                
+                + "AND ubicacion <> 'C1' AND ubicacion <> 'C2' AND ubicacion <> 'C3' AND ubicacion <> 'C4' AND ubicacion <> 'C5' AND ubicacion <> 'C6' AND ubicacion <> 'C7' AND ubicacion <> 'C8' AND ubicacion <> 'C9' AND ubicacion <> 'C10' "
+                + "AND ubicacion <> 'C11' AND ubicacion <> 'C12' AND ubicacion <> 'C13' AND ubicacion <> 'C14' AND ubicacion <> 'C15' AND ubicacion <> 'C16' AND ubicacion <> 'C17' AND ubicacion <> 'C18' AND ubicacion <> 'C19' AND ubicacion <> 'C20' "
+                + "AND ubicacion <> 'C21' AND ubicacion <> 'C22' AND ubicacion <> 'C23' AND ubicacion <> 'C24' AND ubicacion <> 'C25' AND ubicacion <> 'C26' AND ubicacion <> 'C27' AND ubicacion <> 'C28' AND ubicacion <> 'C29' AND ubicacion <> 'C30' "
+                + "AND ubicacion <> 'C31' AND ubicacion <> 'C32' AND ubicacion <> 'C33' AND ubicacion <> 'C34' AND ubicacion <> 'C35' AND ubicacion <> 'C36' AND ubicacion <> 'C37' AND ubicacion <> 'C38' AND ubicacion <> 'C39' AND ubicacion <> 'C40' "
+                ;
+                
+        try {
+            
+            ResultSet r = stmt.executeQuery(contar);
+            r.first();
+            JOptionPane.showMessageDialog(this, "Hay "+ r.getString(1) + " moto(s) en este momento.","", JOptionPane.INFORMATION_MESSAGE);
+        } catch (SQLException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
     }//GEN-LAST:event_cMoto3ActionPerformed
 
     /**
