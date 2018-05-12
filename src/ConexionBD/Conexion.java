@@ -7,6 +7,7 @@ import java.sql.*;
 
 public class Conexion {
 	//String driver="com.mysql.jdbc.Driver";
+    
         String driver = "org.postgresql.Driver";
 	//String url="jdbc:mysql://localhost:3306/acuario"; /** este nombre es el nombre de la base de datos? */
         String url= "jdbc:postgresql://localhost:5432/parqueadero";
