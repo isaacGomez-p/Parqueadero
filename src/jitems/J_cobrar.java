@@ -175,9 +175,9 @@ public class J_cobrar extends javax.swing.JFrame {
         try{
            rs=stmt.executeQuery(qry);
             
-           JOptionPane.showMessageDialog(this,"Bien","Correcto",JOptionPane.OK_OPTION);
+           JOptionPane.showMessageDialog(this,"Vehiculo encontrado","Correcto",JOptionPane.OK_OPTION);
         }catch(SQLDataException e){
-            System.out.printf("Error al grabar");
+            System.out.printf("Error en la búsqueda.");
         } catch (SQLException ex) {
             Logger.getLogger(J_cobrar.class.getName()).log(Level.SEVERE, null, ex);
         }

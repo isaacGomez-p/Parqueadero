@@ -18,6 +18,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import vehiculo.Cliente;
 import vehiculo.Ubicacion;
 import vehiculo.Genera_vehiculo;
 
@@ -29,6 +30,7 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
     SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("H:mm:ss");
     
+    Cliente nuevo; 
     Genera_vehiculo obj1= new Genera_vehiculo();
     Ubicacion obj2 = new Ubicacion();
     Connection con=null;
@@ -83,6 +85,10 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        Tcedula = new javax.swing.JTextField();
+        Tnombre = new javax.swing.JTextField();
+        Tplaca = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         totalCarros = new javax.swing.JMenuItem();
@@ -169,6 +175,13 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
         jLabel6.setText("Placa:");
 
         jLabel7.setText("Cédula:");
+
+        jButton2.setText("Agregar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jMenu3.setText("Cantidad de Vehiculos");
 
@@ -303,60 +316,74 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
                                     .addComponent(nuevo_carro, javax.swing.GroupLayout.Alignment.TRAILING))))
                         .addGap(26, 26, 26)))
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jSalir))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(jLabel7))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel6)
-                                .addComponent(jLabel5)))
-                        .addGap(0, 180, Short.MAX_VALUE))))
+                                .addComponent(jButton2)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(4, 4, 4)
+                                            .addComponent(jLabel7))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel6)
+                                            .addComponent(jLabel5)))
+                                    .addGap(30, 30, 30)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(Tcedula)
+                                        .addComponent(Tnombre)
+                                        .addComponent(Tplaca, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)))))
+                        .addGap(0, 80, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jSalir)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(nuevo_carro))
-                .addGap(17, 17, 17)
+                .addContainerGap()
+                .addComponent(jSeparator1)
+                .addGap(32, 32, 32))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jSalir)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(2, 2, 2)
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(nuevo_carro))
+                        .addGap(19, 19, 19)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(jMoto))
                         .addGap(32, 32, 32)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
-                        .addComponent(Ver_piso1)
-                        .addContainerGap(92, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSeparator1)
-                .addGap(32, 32, 32))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jLabel4)
-                .addGap(21, 21, 21)
-                .addComponent(jLabel7)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Ver_piso1)
+                            .addComponent(jSalir)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(Tcedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(Tnombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(Tplaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -789,6 +816,35 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
         
     }//GEN-LAST:event_cMoto3ActionPerformed
 
+    public void insertaCliente(){
+         String qry ="INSERT INTO cliente (cedula,nombre,placa)VALUES ('"+nuevo.getCedula()+"','"+nuevo.getNombre()+"','"+nuevo.getPlaca()+"')";
+        try{
+            stmt.executeUpdate(qry);
+            JOptionPane.showMessageDialog(this,"Datos ingresados en la base de datos.","Correcto",JOptionPane.NO_OPTION);
+        }catch(org.postgresql.util.PSQLException e){
+            System.out.printf("Error al grabar en la tabla cliente. Un cliente no puede tener mas de dos carros en el parqueadero.");
+        
+        } catch (SQLException ex) {
+            Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        String cedula_s, nombre, placa;
+        Integer cedula = null;
+        cedula_s = Tcedula.getText();
+        nombre = Tnombre.getText();
+        placa = Tplaca.getText();
+        try{
+            cedula = Integer.parseInt(cedula_s);
+        }
+        catch(java.lang.NumberFormatException e){
+            JOptionPane.showMessageDialog(this, "Ingrese un número de cédula válido.","Error", JOptionPane.INFORMATION_MESSAGE);
+        }
+        nuevo = new Cliente(cedula,nombre,placa); 
+        this.insertaCliente();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -822,6 +878,9 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Tcedula;
+    private javax.swing.JTextField Tnombre;
+    private javax.swing.JTextField Tplaca;
     private javax.swing.JButton Ver_piso1;
     private javax.swing.JMenuItem cCarro1;
     private javax.swing.JMenuItem cCarro2;
@@ -831,6 +890,7 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
     private javax.swing.JMenuItem cMoto3;
     private java.awt.Choice choice1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
