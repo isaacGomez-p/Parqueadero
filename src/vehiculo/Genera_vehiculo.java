@@ -39,42 +39,40 @@ public Genera_vehiculo(){
     this.genera_hora();
 }
 public void genera_hora(){
-    String ho;
+    String ho = null;
     LocalDateTime ahora = LocalDateTime.now();
     int hora = ahora.getHour();
     int seg = ahora.getSecond();
     int min = ahora.getMinute();
-    if(hora<10){
+    if(hora<10&&min>10&&seg>10){
         ho = "0"+hora+":"+min+":"+seg;
         System.out.println("la hora es: "+ho);
     }
-    else if(min<10){
+    else if(hora>10&&min<10&&seg>10){
         ho = hora+":0"+min+":"+seg;
         System.out.println("la hora es: "+ho);
     }
-    else if(hora<10 && min<10){
-        ho = "0"+hora+":0"+min+":"+seg;
-        System.out.println("la hora es: "+ho);
-    }
-    else if(min<10 && hora >10){
-        ho = hora+":0"+min+":"+seg;
-        System.out.println("la hora es: "+ho);}
-    else if(min>10 && hora>10){
-       ho = hora+":"+min+":"+seg; 
-       System.out.println("la hora es: "+ho);
-    }
-    else if(seg<10&&min<10){
-        ho= hora+":0"+min+":0"+seg;
-        System.out.println("la hora es: "+ho);
-    }
-    else if(seg<10){
+    else if(hora>10&&min>10&&seg<10){
         ho = hora+":"+min+":0"+seg;
         System.out.println("la hora es: "+ho);
     }
-    else {
-        ho = hora+":"+min+":"+seg;
+    else if(hora<10&&min<10&&seg>10){
+        ho = "0"+hora+":0"+min+":"+seg;
         System.out.println("la hora es: "+ho);
     }
+    else if(hora<10&&min>10&&seg<10){
+        ho = "0"+hora+":"+min+":0"+seg;
+        System.out.println("la hora es: "+ho);        
+    }
+    else if(hora>10&&min<10&&seg<10){
+        ho = hora+":0"+min+":0"+seg;
+        System.out.println("la hora es: "+ho);
+    }
+    else{
+        ho = hora+":"+min+":"+seg;
+        System.out.println("la hora es todos mayor a 10: "+ho);
+    }
+    
     
     int year = ahora.getYear();
     Month mes = ahora.getMonth();

@@ -1,6 +1,7 @@
 package jitems;
 
 import ConexionBD.Conexion;
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLDataException;
@@ -25,6 +26,7 @@ import vehiculo.Genera_vehiculo;
  */
 public class J_cobrar extends javax.swing.JFrame {
     
+    
     SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
     Genera_vehiculo obj4 = new Genera_vehiculo();
     Cobrar_tabla row;
@@ -36,13 +38,12 @@ public class J_cobrar extends javax.swing.JFrame {
     public int idVal=0;
     /**
      * Creates new form J_cobrar
-     * @param con_
-     * @param stmt_
      */
     public J_cobrar(){
         this.con=bd.con();
         this.stmt=bd.stamt();
         initComponents();
+        this.getContentPane().setBackground(Color.DARK_GRAY);
     }
 
     /**
@@ -57,15 +58,29 @@ public class J_cobrar extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         Tplaca = new javax.swing.JTextField();
         Bsearch = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Ingrese la placa:");
 
+        Bsearch.setBackground(new java.awt.Color(255, 255, 51));
+        Bsearch.setForeground(new java.awt.Color(204, 0, 0));
         Bsearch.setText("Buscar");
         Bsearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BsearchActionPerformed(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 0));
+        jButton1.setForeground(new java.awt.Color(51, 51, 0));
+        jButton1.setText("Salir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -76,15 +91,20 @@ public class J_cobrar extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(109, 109, 109)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(Bsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(87, 87, 87)
-                        .addComponent(Tplaca, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(92, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(100, 100, 100)
+                                    .addComponent(Bsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(87, 87, 87)
+                                    .addComponent(Tplaca, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 82, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -95,7 +115,9 @@ public class J_cobrar extends javax.swing.JFrame {
                 .addComponent(Tplaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(88, 88, 88)
                 .addComponent(Bsearch)
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(34, 34, 34))
         );
 
         pack();
@@ -106,7 +128,7 @@ public class J_cobrar extends javax.swing.JFrame {
         String qry = "DELETE FROM vehiculo_ingreso WHERE placa = '"+pl+"';";
         try{
             stmt.executeUpdate(qry);
-            JOptionPane.showMessageDialog(this,"Datos borrados de la base de datos.","Correcto",JOptionPane.NO_OPTION);
+            //JOptionPane.showMessageDialog(this,"Datos borrados de la base de datos.","Correcto",JOptionPane.NO_OPTION);
         }catch(SQLDataException e){
             System.out.printf("Error al borrar");
         } catch (SQLException ex) {
@@ -118,7 +140,7 @@ public class J_cobrar extends javax.swing.JFrame {
         String qry ="INSERT INTO vehiculo_salida (placa,ubicacion,hora_salida,fecha_salida)VALUES ('"+row.getPlaca()+"','"+this.ubc+"','"+obj4.get_hora()+"','"+row.getFecha_ac()+"')";
         try{
             stmt.executeUpdate(qry);
-            JOptionPane.showMessageDialog(this,"Datos ingresados en la base de datos.","Correcto",JOptionPane.NO_OPTION);
+            //JOptionPane.showMessageDialog(this,"Datos ingresados en la base de datos.","Correcto",JOptionPane.NO_OPTION);
         }catch(SQLDataException e){
             System.out.printf("Error al grabar");
         } catch (SQLException ex) {
@@ -131,8 +153,7 @@ public class J_cobrar extends javax.swing.JFrame {
         String qry = "SELECT max(idvalor) FROM cobrar;";
         try{
            rs=stmt.executeQuery(qry);
-            
-           JOptionPane.showMessageDialog(this,"Esto hay: "+rs.toString(),"ENCONTRADO ",JOptionPane.OK_OPTION);
+                     
         }catch(SQLDataException e){
             System.out.printf("Error al grabar");
         } catch (SQLException ex) {
@@ -155,7 +176,7 @@ public class J_cobrar extends javax.swing.JFrame {
          String qry ="INSERT INTO cobrar (placa,tiempo,valor,idvalor,fecha_cobro)VALUES ('"+row.getPlaca()+"','"+row.getTiempo()+"','"+row.getValor()+"','"+(this.idVal+1)+"','"+row.getFecha_ac()+"')";
         try{
             stmt.executeUpdate(qry);
-            JOptionPane.showMessageDialog(this,"Datos ingresados en la base de datos.","Correcto",JOptionPane.NO_OPTION);
+            //JOptionPane.showMessageDialog(this,"Datos ingresados en la base de datos.","Correcto",JOptionPane.NO_OPTION);
         }catch(SQLDataException e){
             System.out.printf("Error al grabar");
         } catch (SQLException ex) {
@@ -163,24 +184,40 @@ public class J_cobrar extends javax.swing.JFrame {
         }
         
     }
-    private void BsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BsearchActionPerformed
-        // TODO add your handling code here:
-        String pl = Tplaca.getText();
-        String a = new String();
-        Time hora_e = null, hora_a;
-        LocalTime hora_a_a, hora_e_e;
-        Date fecha = null;
-        
-        String qry= "SELECT * FROM vehiculo_ingreso WHERE placa ='"+pl+"';";
+    private void buscaCliente(String p){
+       String qry= "SELECT * FROM cliente WHERE placa ='"+p+"';";
         try{
            rs=stmt.executeQuery(qry);
             
-           JOptionPane.showMessageDialog(this,"Vehiculo encontrado","Correcto",JOptionPane.OK_OPTION);
+           
         }catch(SQLDataException e){
             System.out.printf("Error en la búsqueda.");
         } catch (SQLException ex) {
             Logger.getLogger(J_cobrar.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    private void BsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BsearchActionPerformed
+        // TODO add your handling code here:
+        String pl_ = Tplaca.getText();
+        String pl = pl_.toUpperCase();
+        System.out.println("PLACAAAAAAAAAAAAAAAA: "+pl);
+        String a = new String();
+        Time hora_e = null, hora_a;
+        LocalTime hora_a_a, hora_e_e;
+        Date fecha = null;
+        this.buscaCliente(pl);
+        String qry= "SELECT * FROM vehiculo_ingreso WHERE placa ='"+pl+"';";
+        try{
+           rs=stmt.executeQuery(qry);
+            
+        }catch(SQLDataException e){
+            System.out.printf("Error en la búsqueda.");
+        } catch (SQLException ex) {
+            Logger.getLogger(J_cobrar.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+            
+        
         try {
             while(rs.next()){
                  a= rs.getString("placa");
@@ -191,24 +228,24 @@ public class J_cobrar extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(J_cobrar.class.getName()).log(Level.SEVERE, null, ex);
         }
-        JOptionPane.showMessageDialog(this,"Tiene"+a+"\nUbicacion:"+ubc,"no se",JOptionPane.OK_OPTION);
+        try{
         LocalDateTime ahora = LocalDateTime.now();
         System.out.println("Son las: "+ahora.getHour()+":"+ahora.getMinute()+":"+ahora.getSecond());
         String actual = obj4.get_hora();
         System.out.println("PASA ACTUAL:"+actual);
         hora_a = Time.valueOf(actual);
-        JOptionPane.showMessageDialog(this,"Son las: "+hora_a,"HORA",JOptionPane.OK_OPTION);
+        
+        
         hora_a_a = LocalTime.parse(actual);
-        
-        
+               
         String lc = hora_e.toString();
         hora_e_e = LocalTime.parse(lc);
-        
+        JOptionPane.showMessageDialog(this,"Placa: "+a+"\nUbicacion:"+ubc+"\nHora de salida:"+hora_a,"Su vehiculo:",JOptionPane.OK_OPTION);
         System.out.println("Estuvo "+(hora_a_a.toSecondOfDay()-hora_e_e.toSecondOfDay())+"segundos");
         System.out.println("Le cuesta: "+(hora_a_a.toSecondOfDay()-hora_e_e.toSecondOfDay())*6);
         Integer valor, tiempo;
         tiempo = hora_a_a.toSecondOfDay()-hora_e_e.toSecondOfDay();
-        valor = (hora_a_a.toSecondOfDay()-hora_e_e.toSecondOfDay())*100;
+        valor = (hora_a_a.toSecondOfDay()-hora_e_e.toSecondOfDay())*60;
         String fe = obj4.get_fecha();
         try {
             fecha = (Date) formateador.parse(fe);
@@ -216,11 +253,30 @@ public class J_cobrar extends javax.swing.JFrame {
             Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
         }
         row = new Cobrar_tabla(a,tiempo,valor,fecha);        
+        String recibo = "Placa: "+a+"\n\nHora Entrada: "+lc+"\n\nHora Salida: "+actual+"\n\nValor: "+valor+"\n¡Gracias por utilizar nuestro servicio!";
+        System.out.println(recibo);
+        Recibo_pago ob5 = new Recibo_pago(recibo);
+        ob5.setVisible(true);
+        ob5.setLocationRelativeTo(null);
+        
         this.insertaBD();
         this.insertaBD_2();
-        this.borraBD();
+        this.borraBD();}
+        catch(java.lang.NullPointerException e3){
+            JOptionPane.showMessageDialog(this,"Vehiculo no encontrado","",JOptionPane.OK_OPTION);
+        }
+        //}
     }//GEN-LAST:event_BsearchActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Jinicio vuelve = new Jinicio();
+        vuelve.setVisible(true);
+        vuelve.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
@@ -255,6 +311,7 @@ public class J_cobrar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Bsearch;
     private javax.swing.JTextField Tplaca;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

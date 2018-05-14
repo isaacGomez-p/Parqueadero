@@ -6,6 +6,7 @@
 package jitems;
 
 import ConexionBD.Conexion;
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
@@ -25,6 +26,7 @@ public class Jacceso extends javax.swing.JFrame {
         initComponents();
         TFnombre.setText("postgres");
         TFpass.setText("admin");
+        this.getContentPane().setBackground(Color.DARK_GRAY);
     }
 
     /**
@@ -45,17 +47,21 @@ public class Jacceso extends javax.swing.JFrame {
         Blimpiar = new javax.swing.JButton();
         Bsalir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("ADMIN");
 
         jnombre.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jnombre.setForeground(new java.awt.Color(255, 255, 255));
         jnombre.setText("Nombre :");
 
         jPassw.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
+        jPassw.setForeground(new java.awt.Color(255, 255, 255));
         jPassw.setText("Contraseña: ");
 
+        Blogin.setBackground(new java.awt.Color(255, 255, 51));
         Blogin.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
         Blogin.setText("Iniciar Sesión");
         Blogin.addActionListener(new java.awt.event.ActionListener() {
@@ -64,6 +70,7 @@ public class Jacceso extends javax.swing.JFrame {
             }
         });
 
+        Blimpiar.setBackground(new java.awt.Color(255, 255, 51));
         Blimpiar.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
         Blimpiar.setText("Limpiar");
         Blimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -72,6 +79,7 @@ public class Jacceso extends javax.swing.JFrame {
             }
         });
 
+        Bsalir.setBackground(new java.awt.Color(255, 255, 51));
         Bsalir.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
         Bsalir.setForeground(new java.awt.Color(255, 0, 0));
         Bsalir.setText("Salir");
@@ -135,7 +143,10 @@ public class Jacceso extends javax.swing.JFrame {
 
     private void BsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BsalirActionPerformed
         // TODO add your handling code here:
-        dispose();
+        this.setVisible(false);
+        Jinicio vuelve = new Jinicio();
+        vuelve.setVisible(true);
+        vuelve.setLocationRelativeTo(null);
     }//GEN-LAST:event_BsalirActionPerformed
 
     private void BlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BlimpiarActionPerformed
@@ -161,10 +172,11 @@ public class Jacceso extends javax.swing.JFrame {
             if (obc.indica_1() == 1 && obc.indica_2() == 1 ){
                 con = obc.con();
                 stmt = obc.stamt();
-                
+                this.setVisible(false);
                 Jingreso_de_carros obj1 = new Jingreso_de_carros(con,stmt);
                 obj1.setVisible(true);
                 obj1.setLocationRelativeTo(null);
+                
             }
             else
                 JOptionPane.showMessageDialog(this,"No se pudo conectar/clave o usuario invalidos ","Error",JOptionPane.ERROR_MESSAGE);
