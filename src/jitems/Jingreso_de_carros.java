@@ -16,7 +16,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -858,11 +857,13 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
     }//GEN-LAST:event_cMoto3ActionPerformed
 
     public void insertaCliente(){
+        System.out.println("Cedula: "+nuevo.getCedula()+"\nNombre: "+nuevo.getNombre()+"\nPlaca: "+nuevo.getPlaca());
          String qry ="INSERT INTO cliente (cedula,nombre,placa)VALUES ('"+nuevo.getCedula()+"','"+nuevo.getNombre()+"','"+nuevo.getPlaca()+"')";
         try{
             stmt.executeUpdate(qry);
-            JOptionPane.showMessageDialog(this,"Datos ingresados en la base de datos.","Correcto",JOptionPane.NO_OPTION);
+            //JOptionPane.showMessageDialog(this,"Datos ingresados en la base de datos.","Correcto",JOptionPane.NO_OPTION);
         }catch(org.postgresql.util.PSQLException e){
+            JOptionPane.showMessageDialog(this,"Un cliente no puede tener mas de dos carros en el parqueadero..","Error",JOptionPane.ERROR_MESSAGE);
             System.out.printf("Error al grabar en la tabla cliente. Un cliente no puede tener mas de dos carros en el parqueadero.");
         
         } catch (SQLException ex) {
@@ -871,11 +872,17 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
     }
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        String cedula_s, nombre, placa;
+        String cedula_s = null, nombre = null, placa = null;
         Integer cedula = null;
+        //try{
+        //try{
         cedula_s = Tcedula.getText();
         nombre = Tnombre.getText();
         placa = Tplaca.getText();
+    //}
+        //catch(NullPointerException e){
+        //    JOptionPane.showMessageDialog(this, "Ingrese datos en todos los campos.","Error", JOptionPane.INFORMATION_MESSAGE);
+        //}
         try{
             cedula = Integer.parseInt(cedula_s);
         }
