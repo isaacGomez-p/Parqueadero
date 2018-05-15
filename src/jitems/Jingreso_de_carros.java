@@ -119,7 +119,7 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
 
         jMenu1.setText("jMenu1");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
         nuevo_carro.setBackground(new java.awt.Color(255, 255, 51));
         nuevo_carro.setText("Ingresar");

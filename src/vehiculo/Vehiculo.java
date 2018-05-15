@@ -25,6 +25,14 @@ public class Vehiculo {
         this.hora_s = hora_s_;
         this.fecha_e = fecha_e_;
     }
+
+    public Vehiculo(String placa, String posicion, String hora_e, String fecha_e) {
+        this.placa = placa;
+        this.posicion = posicion;
+        this.hora_e = hora_e;
+        this.fecha_e = fecha_e;
+    }
+    
      public static Vehiculo crear(String placa, String tipo, String posicion, String hora_e, String hora_s, String fecha_e){
          return new Vehiculo(placa, tipo, posicion, hora_e, hora_s, fecha_e);
      }

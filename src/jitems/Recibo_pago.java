@@ -1,6 +1,31 @@
 package jitems;
 
 import java.awt.Color;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import javax.swing.JOptionPane;
+import javax.swing.event.DocumentListener;
+import javax.swing.event.UndoableEditListener;
+import javax.swing.text.AttributeSet;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
+import javax.swing.text.Element;
+import javax.swing.text.Position;
+import javax.swing.text.Segment;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
+import java.awt.Color;
+import java.awt.Desktop;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import vehiculo.Genera_vehiculo;
+
+
 
 /**
  *
@@ -11,10 +36,13 @@ public final class Recibo_pago extends javax.swing.JFrame {
     /**
      * Creates new form Recibo_pago
      */
-    String recibo;
-    public Recibo_pago(String recibo_) {
+    String recibo,placa,fecha;
+    
+    public Recibo_pago(String recibo_,String placa_,String fecha_) {
         initComponents();
         this.recibo = recibo_;
+        this.placa = placa_;
+        this.fecha = fecha_;
         this.imprime();
         this.getContentPane().setBackground(Color.DARK_GRAY);
     }
@@ -31,8 +59,7 @@ public final class Recibo_pago extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         TPrecibo = new javax.swing.JTextPane();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Bcontinue = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
@@ -44,16 +71,12 @@ public final class Recibo_pago extends javax.swing.JFrame {
         TPrecibo.setForeground(new java.awt.Color(255, 255, 255));
         jScrollPane2.setViewportView(TPrecibo);
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 102));
-        jButton1.setForeground(new java.awt.Color(51, 51, 0));
-        jButton1.setText("Continuar");
-
-        jButton2.setBackground(new java.awt.Color(255, 255, 102));
-        jButton2.setForeground(new java.awt.Color(51, 51, 0));
-        jButton2.setText("Salir");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Bcontinue.setBackground(new java.awt.Color(255, 255, 102));
+        Bcontinue.setForeground(new java.awt.Color(51, 51, 0));
+        Bcontinue.setText("Continuar");
+        Bcontinue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BcontinueActionPerformed(evt);
             }
         });
 
@@ -61,20 +84,19 @@ public final class Recibo_pago extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(87, 87, 87))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(108, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(104, 104, 104))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(127, 127, 127))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(61, 61, 61)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(79, 79, 79))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addComponent(Bcontinue, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -83,38 +105,70 @@ public final class Recibo_pago extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addGap(44, 44, 44)
+                .addComponent(Bcontinue)
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+    private void BcontinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcontinueActionPerformed
+        try {
+            // TODO add your handling code here:
+            this.creaPDF();
+            JOptionPane.showMessageDialog(this,"Imprimiendo recibo...","Espere por favor.",JOptionPane.INFORMATION_MESSAGE);
+            this.abrir();
+         } catch (FileNotFoundException ex) {
+            Logger.getLogger(Recibo_pago.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DocumentException ex) {
+            Logger.getLogger(Recibo_pago.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.setVisible(false);
         Jinicio vuelve = new Jinicio();
         vuelve.setVisible(true);
         vuelve.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BcontinueActionPerformed
 
     /**
      */
     public void imprime(){
-        
-        
         TPrecibo.setText(recibo);
         TPrecibo.setEnabled(false);
+        System.out.println("FECHA"+fecha);
     }
     
+    public void creaPDF() throws FileNotFoundException, DocumentException{
+        String na = placa+".pdf";
+        FileOutputStream archivo = new FileOutputStream(na);
+        com.itextpdf.text.Document documento = new com.itextpdf.text.Document();
+        PdfWriter.getInstance(documento, archivo);
+        documento.open();
+               
+        Paragraph parrafo = new Paragraph("PARKING");
+        parrafo.setAlignment(1);
+        documento.add(parrafo);
+        
+        documento.add(new Paragraph("\tRECIBO DE PAGO\t"+fecha));
+        documento.add(new Paragraph(""+recibo));
+        
+        documento.close();
+        //JOptionPane.showMessageDialog(null, "Archivo PDF creado correctamente"+na,"Información",1);
+    }
+    public void abrir(){
+         
+        try {
+            File path = new File(placa+".pdf");
+            Desktop.getDesktop().open(path);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex,"Atención",2);
+        }
+    
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Bcontinue;
     private javax.swing.JTextPane TPrecibo;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables

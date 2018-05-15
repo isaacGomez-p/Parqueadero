@@ -26,7 +26,7 @@ public class Imagen extends javax.swing.JPanel {
  
         //Se selecciona la imagen que tenemos en el paquete de la //ruta del programa
  
-        ImageIcon Img = new ImageIcon(getClass().getResource("/img/park.png")); 
+        ImageIcon Img = new ImageIcon(getClass().getResource("/img/per.png")); 
  
         //se dibuja la imagen que tenemos en el paquete Images //dentro de un panel
  
@@ -50,11 +50,11 @@ public class Imagen extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 147, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 152, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

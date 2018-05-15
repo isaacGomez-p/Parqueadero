@@ -17,6 +17,7 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import vehiculo.Cliente;
 import vehiculo.Cobrar_tabla;
 import vehiculo.Genera_vehiculo;
 
@@ -26,7 +27,8 @@ import vehiculo.Genera_vehiculo;
  */
 public class J_cobrar extends javax.swing.JFrame {
     
-    
+    Boolean cl = false;
+    Cliente nuevo;
     SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
     Genera_vehiculo obj4 = new Genera_vehiculo();
     Cobrar_tabla row;
@@ -166,6 +168,7 @@ public class J_cobrar extends javax.swing.JFrame {
                  System.out.println("Ultimo id:"+this.idVal);
             }
         } catch (SQLException ex) {
+            
             Logger.getLogger(J_cobrar.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -182,19 +185,34 @@ public class J_cobrar extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
     }
     private void buscaCliente(String p){
        String qry= "SELECT * FROM cliente WHERE placa ='"+p+"';";
         try{
            rs=stmt.executeQuery(qry);
-            
-           
-        }catch(SQLDataException e){
+        }
+        catch(SQLDataException e){
             System.out.printf("Error en la búsqueda.");
-        } catch (SQLException ex) {
+        }
+        catch (SQLException ex) {
             Logger.getLogger(J_cobrar.class.getName()).log(Level.SEVERE, null, ex);
         }
+        try {
+            if(rs.wasNull()){
+                JOptionPane.showMessageDialog(this,"Error4545 ","Cliente no encontrado rs null",JOptionPane.ERROR_MESSAGE);
+            }else{
+            while(rs.next()){
+                 JOptionPane.showMessageDialog(this,"Cliente encontrado: "+rs.getString("nombre")+" y la placa es: "+rs.getString("placa"),"Cliente encontrado.",JOptionPane.OK_OPTION);   
+                 cl = true;
+                 System.out.println("Cliente "+rs.getString("nombre"));
+            }
+        }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(this,"Error "+ex,"Cliente no encontrado",JOptionPane.ERROR_MESSAGE);
+            cl = false;
+            Logger.getLogger(J_cobrar.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
     private void BsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BsearchActionPerformed
         // TODO add your handling code here:
@@ -208,16 +226,12 @@ public class J_cobrar extends javax.swing.JFrame {
         this.buscaCliente(pl);
         String qry= "SELECT * FROM vehiculo_ingreso WHERE placa ='"+pl+"';";
         try{
-           rs=stmt.executeQuery(qry);
-            
+           rs=stmt.executeQuery(qry); 
         }catch(SQLDataException e){
             System.out.printf("Error en la búsqueda.");
         } catch (SQLException ex) {
             Logger.getLogger(J_cobrar.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-            
-        
         try {
             while(rs.next()){
                  a= rs.getString("placa");
@@ -241,11 +255,16 @@ public class J_cobrar extends javax.swing.JFrame {
         String lc = hora_e.toString();
         hora_e_e = LocalTime.parse(lc);
         JOptionPane.showMessageDialog(this,"Placa: "+a+"\nUbicacion:"+ubc+"\nHora de salida:"+hora_a,"Su vehiculo:",JOptionPane.OK_OPTION);
-        System.out.println("Estuvo "+(hora_a_a.toSecondOfDay()-hora_e_e.toSecondOfDay())+"segundos");
-        System.out.println("Le cuesta: "+(hora_a_a.toSecondOfDay()-hora_e_e.toSecondOfDay())*6);
-        Integer valor, tiempo;
+        
+        System.out.println("CLIENTE O NO"+cl);
+        Integer valor = null, tiempo;
         tiempo = hora_a_a.toSecondOfDay()-hora_e_e.toSecondOfDay();
-        valor = (hora_a_a.toSecondOfDay()-hora_e_e.toSecondOfDay())*60;
+        if(cl == false){
+        valor = (hora_a_a.toSecondOfDay()-hora_e_e.toSecondOfDay())*6;}
+        else if(cl == true){
+            valor = (tiempo*6)-((tiempo*6)/10);
+        }
+        System.out.println("Le cuesta: "+valor);
         String fe = obj4.get_fecha();
         try {
             fecha = (Date) formateador.parse(fe);
@@ -255,15 +274,16 @@ public class J_cobrar extends javax.swing.JFrame {
         row = new Cobrar_tabla(a,tiempo,valor,fecha);        
         String recibo = "Placa: "+a+"\n\nHora Entrada: "+lc+"\n\nHora Salida: "+actual+"\n\nValor: "+valor+"\n¡Gracias por utilizar nuestro servicio!";
         System.out.println(recibo);
-        Recibo_pago ob5 = new Recibo_pago(recibo);
+        Recibo_pago ob5 = new Recibo_pago(recibo,a,fe);
         ob5.setVisible(true);
         ob5.setLocationRelativeTo(null);
         
         this.insertaBD();
         this.insertaBD_2();
-        this.borraBD();}
+        this.borraBD();
+        this.setVisible(false);}
         catch(java.lang.NullPointerException e3){
-            JOptionPane.showMessageDialog(this,"Vehiculo no encontrado","",JOptionPane.OK_OPTION);
+            JOptionPane.showMessageDialog(this,"Vehículo no registra en el parqueadero.","",JOptionPane.OK_OPTION);
         }
         //}
     }//GEN-LAST:event_BsearchActionPerformed
