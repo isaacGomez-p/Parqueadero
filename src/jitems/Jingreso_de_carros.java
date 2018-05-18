@@ -27,10 +27,11 @@ import vehiculo.Genera_vehiculo;
  *
  * @author ISAACELEAZAR
  */
-public class Jingreso_de_carros extends javax.swing.JFrame {
+public final class Jingreso_de_carros extends javax.swing.JFrame {
     SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("H:mm:ss");
     
+    Integer total;   
     Cliente nuevo; 
     Genera_vehiculo obj1= new Genera_vehiculo();
     Ubicacion obj2 = new Ubicacion();
@@ -54,7 +55,10 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
         this.con = con_;
         this.stmt = stmt_;
         this.getContentPane().setBackground(Color.darkGray);
+        this.cuentaVehiculos();
+        this.setResizable(false);
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -351,24 +355,26 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addGap(4, 4, 4)
-                                            .addComponent(jLabel7))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel6)
-                                            .addComponent(jLabel5)))
-                                    .addGap(32, 32, 32)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(34, 34, 34)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(Tcedula)
-                                        .addComponent(Tnombre, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
-                                        .addComponent(Tplaca)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(0, 88, Short.MAX_VALUE))
+                                        .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(4, 4, 4)
+                                                .addComponent(jLabel7))
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(jLabel6)
+                                                .addComponent(jLabel5)))
+                                        .addGap(32, 32, 32)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(Tcedula)
+                                            .addComponent(Tnombre, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                                            .addComponent(Tplaca))))))
+                        .addGap(0, 54, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jSalir)
@@ -400,9 +406,9 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
                             .addComponent(Tplaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jButton2)
-                        .addGap(18, 18, 18)
+                        .addGap(30, 30, 30)
                         .addComponent(jButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                         .addComponent(jSalir)
                         .addGap(23, 23, 23))
                     .addGroup(layout.createSequentialGroup()
@@ -426,7 +432,29 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    public int cuentaVehiculos(){
+        String qry = "SELECT count(*) FROM vehiculo_ingreso;";
+        try{
+           rs=stmt.executeQuery(qry);
+                     
+        }catch(SQLDataException e){
+            System.out.printf("Error en la búsqueda");
+        } catch (SQLException ex) {
+            Logger.getLogger(J_cobrar.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            while(rs.next()){
+                 total = rs.getInt("count");
+                 
+                 System.out.println("Tiene :"+this.total);
+            }
+        } catch (SQLException ex) {
+            
+            Logger.getLogger(J_cobrar.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return total;
+    }
+    
     private void nuevo_carroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevo_carroActionPerformed
         // TODO add your handling code here:
         System.out.println("Placa nueva");
@@ -508,7 +536,7 @@ public class Jingreso_de_carros extends javax.swing.JFrame {
         String qry ="INSERT INTO vehiculo_ingreso (placa,ubicacion,fecha_ingreso,hora_ingreso)VALUES ('"+this.placa_bd+"','"+this.ubicacion_bd+"','"+this.fecha_ingreso_bd+"','"+this.hora_ingreso_bd+"')";
         try{
             stmt.executeUpdate(qry);
-            JOptionPane.showMessageDialog(this,"Datos ingresados en la base de datos.","Correcto",JOptionPane.NO_OPTION);
+            //JOptionPane.showMessageDialog(this,"Datos ingresados en la base de datos.","Correcto",JOptionPane.NO_OPTION);
         }catch(SQLDataException e){
             System.out.printf("Error al grabar");
         } catch (SQLException ex) {

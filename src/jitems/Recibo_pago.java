@@ -45,6 +45,7 @@ public final class Recibo_pago extends javax.swing.JFrame {
         this.fecha = fecha_;
         this.imprime();
         this.getContentPane().setBackground(Color.DARK_GRAY);
+        this.setResizable(false);
     }
 
     /**

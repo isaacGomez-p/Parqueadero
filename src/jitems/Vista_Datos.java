@@ -48,7 +48,7 @@ public final class Vista_Datos extends javax.swing.JFrame {
         this.traeClientes();
         this.traeVehiculosAhora();
         this.traeVehiculos();
-        
+        this.setResizable(false);
         lDesde.setVisible(false);
             lHasta.setVisible(false);
             jDesde.setVisible(false);
@@ -148,22 +148,22 @@ public final class Vista_Datos extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(153, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap(138, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(Brefresh3, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Bsalir3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(115, 115, 115))
+                        .addComponent(Bsalir3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(130, 130, 130))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
+                .addGap(48, 48, 48)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(40, 40, 40)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Bsalir3)
                     .addComponent(Brefresh3))
@@ -214,22 +214,22 @@ public final class Vista_Datos extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(118, 118, 118)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(Brefresh1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(294, 294, 294)
                         .addComponent(Bsalir1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addGap(131, 131, 131))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addGap(50, 50, 50)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Brefresh1)
                     .addComponent(Bsalir1))
@@ -376,7 +376,7 @@ public final class Vista_Datos extends javax.swing.JFrame {
                             .addComponent(lHasta)
                             .addComponent(jDesde)
                             .addComponent(jHasta, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE))))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -397,6 +397,11 @@ public final class Vista_Datos extends javax.swing.JFrame {
         );
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sin filtro", "Fecha" }));
+        jComboBox1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jComboBox1FocusLost(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(255, 255, 51));
         jButton3.setText("Buscar");
@@ -419,14 +424,16 @@ public final class Vista_Datos extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
                         .addComponent(Brefresh4)
-                        .addGap(300, 300, 300)
+                        .addGap(292, 292, 292)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -452,10 +459,10 @@ public final class Vista_Datos extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jSeparator1))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
+                        .addGap(58, 58, 58)
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton1)
                             .addComponent(Brefresh4))
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -721,41 +728,32 @@ public final class Vista_Datos extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        
-        int jc = jComboBox1.getSelectedIndex();
-        
-        if(jc == 0){
-            lDesde.setVisible(false);
-            lHasta.setVisible(false);
-            jDesde.setVisible(false);
-            jHasta.setVisible(false);
-            this.traeCobro(jc,null,null);
-        }
-        else if(jc == 1){
-            lDesde.setVisible(true);
-            lHasta.setVisible(true);
-            jDesde.setVisible(true);
-            jHasta.setVisible(true);
+          int jc = jComboBox1.getSelectedIndex();
             Date f1 = null, f2 = null;
-            if(jDesde.equals("")||jHasta.equals("")){
+            if(jDesde.equals("")||jHasta.equals("")&&jc==1){
                 JOptionPane.showMessageDialog(this,"Por favor ingrese datos en los campos.","Datos incorrectos",JOptionPane.ERROR_MESSAGE);
             }
-            else{
+            else if(jc == 1){
             try {
             f1 = (Date) formateador.parse(jDesde.getText());
             f2 = (Date) formateador.parse(jHasta.getText());
             this.traeCobro(jc,f1,f2);
-        } catch (ParseException ex) {
-            JOptionPane.showMessageDialog(this,"Ingrese una fecha correcta (dd/mm/aaaa)","Error.",JOptionPane.ERROR_MESSAGE);
+           
+        }
+             catch (ParseException ex) {
+            JOptionPane.showMessageDialog(this,"Ingrese una fecha correcta (dd/mm/aaaa)"+jc,"Error.",JOptionPane.ERROR_MESSAGE);
             //Logger.getLogger(Jingreso_de_carros.class.getName()).log(Level.SEVERE, null, ex);
-        }
-            
-            }
-        }
+        }}
+            else if(jc ==0){
+                    this.traeCobro(0, null, null);
+         }
+               
+             
+        
         try{
         jCo_to.setText(co_to.toString());}
         catch(java.lang.NullPointerException e){
-            System.out.println("jcoto vacio.");
+            System.out.println("jcoto vacio."+jc);
         }
         
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -779,6 +777,23 @@ public final class Vista_Datos extends javax.swing.JFrame {
         jHasta.setText("");
         jCo_to.setText("");
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jComboBox1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jComboBox1FocusLost
+        // TODO add your handling code here:
+        int jc = jComboBox1.getSelectedIndex();
+        if(jc == 0){
+            lDesde.setVisible(false);
+            lHasta.setVisible(false);
+            jDesde.setVisible(false);
+            jHasta.setVisible(false);
+            
+        }
+        else if(jc == 1){
+            lDesde.setVisible(true);
+            lHasta.setVisible(true);
+            jDesde.setVisible(true);
+            jHasta.setVisible(true);}
+    }//GEN-LAST:event_jComboBox1FocusLost
 
     /**
      * @param args the command line arguments

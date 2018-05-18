@@ -5,7 +5,13 @@
  */
 package jitems;
 
+import ConexionBD.Conexion;
 import java.awt.Color;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import static javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE;
 
 /**
  *
@@ -16,6 +22,10 @@ public class Jinicio extends javax.swing.JFrame {
     /**
      * Creates new form Jinicio
      */
+    Conexion otra = new Conexion("postgres","admin");
+        Connection con = otra.con();
+         Statement stmt=otra.stamt();
+        ResultSet rs=null;
     Jacceso obj1 = new Jacceso();
     Imagen a = new Imagen();
         
@@ -29,8 +39,10 @@ public class Jinicio extends javax.swing.JFrame {
         initComponents();
         this.getContentPane().setBackground(Color.DARK_GRAY);
         this.setResizable(false);
-        jPanel.add(a);
-        jPanel.repaint();
+        
+        
+        //jPanel.add(a);
+        //jPanel.repaint();
     }
 
     /**
@@ -45,13 +57,20 @@ public class Jinicio extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         Bcobrar = new javax.swing.JButton();
         Badmin = new javax.swing.JButton();
-        jPanel = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Gungsuh", 1, 36)); // NOI18N
         jLabel1.setForeground(java.awt.Color.yellow);
-        jLabel1.setText("PARKING ");
+        jLabel1.setText("PAR-KING ");
         jLabel1.setAlignmentX(0.5F);
 
         Bcobrar.setBackground(new java.awt.Color(255, 255, 51));
@@ -72,55 +91,73 @@ public class Jinicio extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanelLayout = new javax.swing.GroupLayout(jPanel);
-        jPanel.setLayout(jPanelLayout);
-        jPanelLayout.setHorizontalGroup(
-            jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 171, Short.MAX_VALUE)
-        );
-        jPanelLayout.setVerticalGroup(
-            jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jLabel3.setBackground(new java.awt.Color(255, 255, 0));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/park.png"))); // NOI18N
+        jLabel3.setText("jLabel3");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/i dotn know.png"))); // NOI18N
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/i dotn know.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(110, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Bcobrar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(79, 79, 79)
+                .addComponent(Badmin)
+                .addGap(119, 119, 119))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Bcobrar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(118, 118, 118))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(54, 54, 54)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Badmin)
-                    .addComponent(jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(52, 52, 52))
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(13, 13, 13)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(37, 37, 37)
+                        .addGap(47, 47, 47)
+                        .addComponent(jLabel3)))
+                .addGap(61, 61, 61)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Badmin)
                     .addComponent(Bcobrar, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    
+    public void verifica(){
+        Jingreso_de_carros obj3 = new Jingreso_de_carros(con,stmt);
+        int tot = obj3.cuentaVehiculos();
+        
+        if(tot !=0){
+            this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+            
+            JOptionPane.showMessageDialog(obj1, "Debe cobrar todos los carros antes de salir del programa. Vehículos en este momento: "+tot);
+        }
+        else{
+            System.exit(0);
+        }
+    }
+    
     private void BadminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BadminActionPerformed
         // TODO add your handling code here:
         obj1.setVisible(true);
@@ -137,6 +174,11 @@ public class Jinicio extends javax.swing.JFrame {
         this.setVisible(false);
         
     }//GEN-LAST:event_BcobrarActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        // TODO add your handling code here:
+        this.verifica();
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
@@ -175,6 +217,8 @@ public class Jinicio extends javax.swing.JFrame {
     private javax.swing.JButton Badmin;
     private javax.swing.JButton Bcobrar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

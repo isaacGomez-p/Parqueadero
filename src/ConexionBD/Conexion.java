@@ -1,4 +1,4 @@
-/********************************************************/
+
 package ConexionBD;
 /**
  * @author FernelMoreno
